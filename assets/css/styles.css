@@ -35,14 +35,19 @@ body{
 
 .hero-profile{
   margin:25px 0;
+  display:flex;
+  align-items:center;
 }
 
 .hero-profile img{
+  max-width:120px;
+  max-height:120px;
   width:120px;
   height:120px;
   object-fit:cover;
   border-radius:50%;
   border:2px solid var(--line);
+  display:block;
 }
 
 .hero-subtitle{
