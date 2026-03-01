@@ -4,9 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title | default: site.title }}</title>
-  <meta name="description" content="CV y repositorios destacados en GitHub." />
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta name="description" content="Portfolio de Diego Gil - Desarrollador de Aplicaciones Multiplataforma." />
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+
+  <!-- Devicon (logos tecnologías) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
+
 <body>
   {{ content }}
 </body>
