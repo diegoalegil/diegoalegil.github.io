@@ -52,12 +52,12 @@ body{
 }
 
 .hero-top > img{
-  width:100px !important;
-  height:100px !important;
-  min-width:100px !important;
-  min-height:100px !important;
-  max-width:100px !important;
-  max-height:100px !important;
+  width:100px;
+  height:100px;
+  min-width:100px;
+  min-height:100px;
+  max-width:100px;
+  max-height:100px;
   object-fit:cover;
   border-radius:50%;
   border:2px solid var(--line);
@@ -194,6 +194,7 @@ body{
   border:1px solid var(--line);
   box-shadow:var(--shadow);
   transition:0.3s ease;
+  position:relative;
 }
 
 .card:hover{
@@ -208,6 +209,41 @@ body{
 
 .muted{
   color:var(--muted);
+}
+
+/* ========================= */
+/* ICONOS EN TECNOLOGÍAS */
+/* ========================= */
+
+.card-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+
+.tech-card i{
+  font-size:32px;
+  min-width:32px;
+  transition:0.3s ease;
+}
+
+.tech-card:hover i{
+  transform:scale(1.15);
+}
+
+/* ========================= */
+/* ICONOS EN SOBRE MÍ */
+/* ========================= */
+
+.icon-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.icon-title span{
+  font-size:22px;
 }
 
 /* ========================= */
@@ -240,7 +276,7 @@ body{
     font-size:38px;
   }
 
-  .hero-top img{
+  .hero-top > img{
     width:80px;
     height:80px;
   }
