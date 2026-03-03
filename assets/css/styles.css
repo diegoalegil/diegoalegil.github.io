@@ -116,9 +116,8 @@ h1 {
 /* Reveal animation */
 
 .reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 1s ease;
+  opacity: 1;
+  transform: none;
 }
 
 .reveal.active {
