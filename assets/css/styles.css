@@ -244,3 +244,26 @@ footer {
   background: black;
   color: var(--text-soft);
 }
+/* 🔒 Control absoluto de imágenes */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-img::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: conic-gradient(var(--neon-pink), var(--neon-blue), var(--neon-purple), var(--neon-pink));
+  z-index: -1;
+}
