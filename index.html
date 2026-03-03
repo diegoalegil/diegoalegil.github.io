@@ -3,16 +3,17 @@ layout: default
 title: "Diego Gil"
 ---
 
+<div class="progress-bar"></div>
+
 <div class="container">
 
   <!-- HERO -->
   <section class="hero reveal">
     <div class="hero-grid">
 
-      <!-- IZQUIERDA -->
       <div class="hero-left">
         <div class="hero-top">
-          <img src="assets/img/diego.jpeg" alt="Foto Diego">
+          <img src="{{ '/assets/img/perfil.jpg' | relative_url }}" alt="Foto Diego">
           <h1 class="title gradient-text">DIEGO GIL</h1>
         </div>
 
@@ -32,8 +33,7 @@ title: "Diego Gil"
         </div>
       </div>
 
-      <!-- DERECHA -->
-      <div class="hero-right">
+      <div class="hero-right glass-card">
         <h3 class="focus-title">Enfoque actual</h3>
         <ul class="focus-list">
           <li>Arquitectura limpia y bien estructurada</li>
@@ -50,28 +50,22 @@ title: "Diego Gil"
     <h2>Sobre mí</h2>
     <div class="cards">
 
-      <div class="card">
-        <h3 class="icon-title">
-          <span>🧠</span> Pensamiento lógico
-        </h3>
+      <div class="card tilt">
+        <h3>🧠 Pensamiento lógico</h3>
         <p class="muted">
           Analizo antes de programar. Diseño antes de implementar.
         </p>
       </div>
 
-      <div class="card">
-        <h3 class="icon-title">
-          <span>⚙️</span> Backend orientado a lógica
-        </h3>
+      <div class="card tilt">
+        <h3>⚙️ Backend orientado a lógica</h3>
         <p class="muted">
-          Desarrollo con Java y SQL priorizando claridad y mantenibilidad.
+          Java y bases de datos con foco en mantenibilidad.
         </p>
       </div>
 
-      <div class="card">
-        <h3 class="icon-title">
-          <span>🚀</span> Construcción de criterio técnico
-        </h3>
+      <div class="card tilt">
+        <h3>🚀 Construcción de criterio técnico</h3>
         <p class="muted">
           Cada proyecto es una oportunidad para pensar como arquitecto.
         </p>
@@ -85,34 +79,19 @@ title: "Diego Gil"
     <h2>Tecnologías</h2>
     <div class="cards">
 
-      <div class="card tech-card">
-        <div class="card-header">
-          <i class="devicon-java-plain colored"></i>
-          <h3>Java</h3>
-        </div>
-        <p class="muted">
-          POO, estructuras de datos y bases sólidas.
-        </p>
+      <div class="card tech-card tilt">
+        <h3>Java</h3>
+        <p class="muted">POO y fundamentos sólidos.</p>
       </div>
 
-      <div class="card tech-card">
-        <div class="card-header">
-          <i class="devicon-mysql-plain colored"></i>
-          <h3>SQL</h3>
-        </div>
-        <p class="muted">
-          Modelado relacional y consultas optimizadas.
-        </p>
+      <div class="card tech-card tilt">
+        <h3>SQL</h3>
+        <p class="muted">Modelado relacional eficiente.</p>
       </div>
 
-      <div class="card tech-card">
-        <div class="card-header">
-          <i class="devicon-html5-plain colored"></i>
-          <h3>HTML & CSS</h3>
-        </div>
-        <p class="muted">
-          Estructura semántica y diseño moderno responsive.
-        </p>
+      <div class="card tech-card tilt">
+        <h3>HTML & CSS</h3>
+        <p class="muted">Diseño limpio y responsive.</p>
       </div>
 
     </div>
