@@ -27,15 +27,16 @@ body {
 .nav {
   position: fixed;
   width: 100%;
-  background: linear-gradient(90deg, var(--bg-dark), var(--bg-light));
-  border-bottom: 1px solid rgba(255,0,200,0.2);
+  top: 0;
+  background: transparent; /* antes tenía degradado oscuro */
+  border-bottom: none;
   z-index: 1000;
 }
 
 .nav-container {
   max-width: 1200px;
   margin: auto;
-  height: 70px;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
