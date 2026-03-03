@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  /* REVEAL SCROLL */
+  /* REVEAL */
 
   const reveals = document.querySelectorAll(".reveal");
 
@@ -14,8 +14,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
   reveals.forEach(el => observer.observe(el));
 
+  /* DESVANECER CIELO */
 
-  /* PARTICLES */
+  const bg = document.getElementById("background-layer");
+
+  window.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+    const max = window.innerHeight * 2;
+
+    let opacity = 1 - scroll / max;
+    if (opacity < 0) opacity = 0;
+
+    bg.style.opacity = opacity;
+  });
+
+  /* PARTICULAS */
 
   const canvas = document.getElementById("particles-canvas");
   const ctx = canvas.getContext("2d");
@@ -35,13 +48,13 @@ document.addEventListener("DOMContentLoaded", function() {
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       r: Math.random() * 2,
-      d: Math.random() * 0.5 + 0.2
+      d: Math.random() * 0.5 + 0.3
     });
   }
 
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "rgba(255,255,255,0.6)";
+    ctx.fillStyle = "rgba(255,255,255,0.5)";
     ctx.beginPath();
 
     particles.forEach(p => {
