@@ -1,9 +1,7 @@
 :root {
-  --bg1: #2a0040;
-  --bg2: #100022;
+  --bg-dark: #0a0014;
   --accent1: #00e0ff;
   --accent2: #ff4dff;
-  --text: #ffffff;
 }
 
 * {
@@ -14,28 +12,29 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  color: var(--text);
-  background: linear-gradient(180deg, var(--bg1), var(--bg2));
+  color: white;
+  background: var(--bg-dark);
   overflow-x: hidden;
 }
 
-/* Fondo dinámico */
+/* FONDO CIELO */
 
 #background-layer {
   position: fixed;
   inset: 0;
   background: url('../img/hero-sky.webp') center/cover no-repeat;
+  z-index: -3;
+  transition: opacity 0.3s ease;
+}
+
+#color-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(50,0,80,0.7), rgba(0,0,0,0.9));
   z-index: -2;
-  animation: slowZoom 40s infinite alternate ease-in-out;
-  filter: brightness(0.7) saturate(1.2);
 }
 
-@keyframes slowZoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.1); }
-}
-
-/* Canvas partículas */
+/* PARTICULAS */
 
 #particles-canvas {
   position: fixed;
@@ -44,11 +43,11 @@ body {
   pointer-events: none;
 }
 
-/* Secciones */
+/* SECCIONES */
 
-section {
+.section {
   min-height: 100vh;
-  padding: 120px 10%;
+  padding: 150px 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +55,7 @@ section {
   text-align: center;
 }
 
-/* Hero */
+/* HERO */
 
 .profile-wrapper {
   width: 200px;
@@ -68,64 +67,115 @@ section {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  overflow: visible;
+  overflow: hidden;
   border: 3px solid var(--accent1);
   box-shadow: 0 0 40px var(--accent1);
 }
 
 .profile-circle img {
   width: 100%;
-  position: relative;
-  top: -25px;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Títulos */
+/* NEON FLOW */
 
-h1 {
+.neon-flow {
   font-family: 'Orbitron', sans-serif;
   font-size: 3rem;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent1));
+  background-size: 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: neonFlow 5s linear infinite;
 }
 
-h2 {
-  font-family: 'Orbitron', sans-serif;
-  margin-bottom: 20px;
+@keyframes neonFlow {
+  0% { background-position: 0% }
+  100% { background-position: 300% }
 }
 
 .slogan {
-  font-size: 1.2rem;
+  margin-top: 20px;
   opacity: 0.9;
 }
 
-/* Glass card */
+/* GLASS */
 
 .glass {
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(15px);
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 20px;
-  padding: 40px;
-  max-width: 700px;
+  padding: 50px;
+  max-width: 800px;
   transition: 0.4s ease;
 }
 
 .glass:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 40px var(--accent2);
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px var(--accent2);
 }
 
-/* Reveal animation */
+/* CONTACTO */
+
+.contact-phone {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: var(--accent1);
+}
+
+.contact-highlight {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.contact-links {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-links a {
+  padding: 10px 25px;
+  border: 1px solid var(--accent1);
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.contact-links a:hover {
+  background: var(--accent1);
+  color: black;
+  box-shadow: 0 0 20px var(--accent1);
+}
+
+/* REVEAL */
 
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(60px);
   transition: 1s ease;
 }
 
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* SCROLL INDICATOR */
+
+.scroll-indicator {
+  width: 2px;
+  height: 40px;
+  margin-top: 40px;
+  background: var(--accent1);
+  animation: scrollPulse 1.5s infinite;
+}
+
+@keyframes scrollPulse {
+  0% { opacity: 0.3; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.4); }
+  100% { opacity: 0.3; transform: scaleY(1); }
 }
