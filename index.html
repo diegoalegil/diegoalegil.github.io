@@ -2,179 +2,108 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <title>Diego Gil | Desarrollador DAM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diego Gil</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <canvas id="stars"></canvas>
+<nav class="nav">
+  <div class="nav-container">
+    <div class="logo">DIEGO<span>.DEV</span></div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#formacion">Formación</a></li>
+      <li><a href="#contacto" class="btn-contacto">Contactar</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo">Diego Gil</div>
-      <div class="nav-links">
-        <a href="#hero">Inicio</a>
-        <a href="#about">Sobre mí</a>
-        <a href="#stack">Stack</a>
-        <a href="#education">Formación</a>
-        <a href="#value">Qué aporto</a>
-        <a href="#contact">Contacto</a>
-      </div>
+<section id="inicio" class="hero">
+  <div class="hero-content">
+    <h1>Diego Gil</h1>
+    <p>Desarrollador en formación · DAM</p>
+  </div>
+</section>
+
+<section id="sobre-mi" class="section">
+  <h2 class="section-title">Sobre mí</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      Estudiante de <span class="highlight">Desarrollo de Aplicaciones Multiplataforma</span>.
     </div>
-  </nav>
-
-  <!-- HERO -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <div class="profile-wrapper">
-        <img src="assets/img/diego.jpeg" alt="Diego Gil">
-      </div>
-      <h1 class="gradient-text">Diego Gil</h1>
-      <h2>Desarrollo de Aplicaciones Multiplataforma</h2>
-      <p>
-        Busco prácticas DAM / Junior Developer.<br>
-        Evolucionando hacia Full Stack con enfoque backend.
-      </p>
-      <a href="#contact" class="btn-primary">Contactar</a>
+    <div class="timeline-item">
+      Formación en <span class="highlight">DAM Tenerife</span>.
     </div>
-  </section>
-
-  <!-- SOBRE MI -->
-  <section id="about" class="section dark">
-    <h2 class="section-title">// Sobre mí</h2>
-    <div class="about-grid">
-      <div class="timeline-line"></div>
-
-      <div class="about-item">
-        <h3>DAM en Tenerife</h3>
-        <p>Estudiante de Desarrollo de Aplicaciones Multiplataforma con enfoque estructural.</p>
-      </div>
-
-      <div class="about-item">
-        <h3>Inglés C1</h3>
-        <p>Capacidad profesional de comunicación técnica.</p>
-      </div>
-
-      <div class="about-item">
-        <h3>Carnet B + Vehículo propio</h3>
-        <p>Disponibilidad presencial cuando sea necesario.</p>
-      </div>
-
-      <div class="about-item">
-        <h3>Enfoque Backend</h3>
-        <p>Arquitectura limpia, lógica sólida y pensamiento estructurado.</p>
-      </div>
-
+    <div class="timeline-item">
+      <span class="highlight">C1 Inglés</span> · Carnet B · Vehículo propio.
     </div>
-  </section>
-
-  <!-- STACK -->
-  <section id="stack" class="section darker">
-    <h2 class="section-title">// Stack tecnológico</h2>
-
-    <div class="cards-grid">
-
-      <div class="card">
-        <h3>Java</h3>
-        <p>POO · Colecciones · Streams</p>
-      </div>
-
-      <div class="card">
-        <h3>SQL</h3>
-        <p>JOIN · Optimización · Modelado relacional</p>
-      </div>
-
-      <div class="card">
-        <h3>HTML</h3>
-        <p>Estructura semántica clara y accesible</p>
-      </div>
-
-      <div class="card">
-        <h3>CSS</h3>
-        <p>Responsive · Flexbox · Diseño limpio</p>
-      </div>
-
-      <div class="card">
-        <h3>JavaScript</h3>
-        <p>DOM · Interactividad · Lógica cliente</p>
-      </div>
-
+    <div class="timeline-item">
+      Busco aportar desde el primer día y crecer como desarrollador.
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FORMACIÓN -->
-  <section id="education" class="section dark">
-    <h2 class="section-title">// Formación</h2>
-    <div class="education-card">
-      <h3>Grado Superior DAM</h3>
-      <p>
-        Formación activa en programación, bases de datos,
-        estructuras de datos y arquitectura de sistemas.
-      </p>
+<section id="stack" class="section dark">
+  <h2 class="section-title">Stack</h2>
+
+  <div class="cards-grid">
+    <div class="card">
+      <h3>Java</h3>
+      <p>POO, backend, APIs REST</p>
     </div>
-  </section>
 
-  <!-- QUÉ APORTO -->
-  <section id="value" class="section darker">
-    <h2 class="section-title">// Qué puedo aportar</h2>
-
-    <div class="value-grid">
-      <div class="value-card">
-        <h3>Mentalidad estructural</h3>
-        <p>Entiendo el código como sistema, no como bloques aislados.</p>
-      </div>
-
-      <div class="value-card">
-        <h3>Aprendizaje continuo</h3>
-        <p>Me adapto rápido y profundizo en arquitectura y backend.</p>
-      </div>
-
-      <div class="value-card">
-        <h3>Visión Full Stack</h3>
-        <p>Construyo soluciones pensando en escalabilidad y claridad.</p>
-      </div>
+    <div class="card">
+      <h3>HTML & CSS</h3>
+      <p>Interfaces modernas y responsive</p>
     </div>
-  </section>
 
-  <!-- CONTACTO -->
-  <section id="contact" class="section darkest">
-    <h2 class="section-title">// Contacto</h2>
-
-    <div class="contact-grid">
-
-      <div class="contact-info">
-        <div class="contact-card">
-          <h3>Teléfono</h3>
-          <p>+34 666 329 790</p>
-        </div>
-
-        <div class="contact-card">
-          <h3>Email</h3>
-          <p>diegogildam@gmail.com</p>
-        </div>
-
-        <div class="contact-card">
-          <h3>GitHub</h3>
-          <p>github.com/diegoalegil</p>
-        </div>
-      </div>
-
-      <div class="contact-text">
-        <h3>Hablemos</h3>
-        <p>
-          Busco aportar desde el primer día.  
-          Disponible para prácticas DAM o posición Junior en Tenerife.
-        </p>
-      </div>
-
+    <div class="card">
+      <h3>JavaScript</h3>
+      <p>Interactividad y lógica frontend</p>
     </div>
-  </section>
 
-  <script src="assets/js/main.js"></script>
+    <div class="card">
+      <h3>Bases de Datos</h3>
+      <p>MySQL, diseño relacional</p>
+    </div>
+  </div>
+</section>
+
+<section id="formacion" class="section">
+  <h2 class="section-title">Formación</h2>
+
+  <div class="card big">
+    <h3>DAM – Desarrollo de Aplicaciones Multiplataforma</h3>
+    <p>Backend, bases de datos, programación estructurada y orientada a objetos.</p>
+  </div>
+</section>
+
+<section id="contacto" class="section dark contact">
+  <div class="contact-left">
+    <h2 class="section-title">Hablemos</h2>
+
+    <div class="contact-card">📧 diegogildam@gmail.com</div>
+    <div class="contact-card">💻 github.com/diegoalegil</div>
+  </div>
+
+  <div class="contact-right">
+    No busco una oportunidad para “aprender desde cero”.
+    Busco un equipo donde <span>aportar desde el primer día</span>
+    y seguir creciendo profesionalmente.
+  </div>
+</section>
+
+<footer>
+  © 2025 Diego Gil · DAM · Canarias
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
