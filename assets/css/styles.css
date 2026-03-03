@@ -19,15 +19,15 @@ body {
   overflow-x: hidden;
 }
 
-/* Fondo slow zoom */
+/* Fondo dinámico */
 
 #background-layer {
   position: fixed;
   inset: 0;
-  background: url('/assets/img/hero-sky.webp') center/cover no-repeat;
+  background: url('../img/hero-sky.webp') center/cover no-repeat;
   z-index: -2;
   animation: slowZoom 40s infinite alternate ease-in-out;
-  filter: saturate(1.2) brightness(0.8);
+  filter: brightness(0.7) saturate(1.2);
 }
 
 @keyframes slowZoom {
@@ -54,13 +54,11 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
 }
 
 /* Hero */
 
 .profile-wrapper {
-  position: relative;
   width: 200px;
   height: 200px;
   margin-bottom: 40px;
@@ -81,9 +79,10 @@ section {
   top: -25px;
 }
 
+/* Títulos */
+
 h1 {
   font-family: 'Orbitron', sans-serif;
-  font-weight: 600;
   font-size: 3rem;
   margin-bottom: 20px;
   background: linear-gradient(90deg, var(--accent1), var(--accent2));
@@ -91,12 +90,17 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 20px;
+}
+
 .slogan {
   font-size: 1.2rem;
   opacity: 0.9;
 }
 
-/* Glass cards */
+/* Glass card */
 
 .glass {
   backdrop-filter: blur(12px);
@@ -116,8 +120,9 @@ h1 {
 /* Reveal animation */
 
 .reveal {
-  opacity: 1;
-  transform: none;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
 }
 
 .reveal.active {
