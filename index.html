@@ -5,17 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diego Gil</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
+  <!-- CAPAS DE FONDO -->
   <div id="background-layer"></div>
-  <div id="color-overlay"></div>
+  <div id="dark-overlay"></div>
+  <div id="grid-layer"></div>
   <canvas id="particles-canvas"></canvas>
 
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">Diego Gil</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#sobre">Sobre mí</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#formacion">Formación</a></li>
+      <li><a href="#aporte">Qué aporto</a></li>
+      <li><a class="contact-btn" href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
   <!-- HERO -->
-  <section class="hero section">
+  <section id="hero" class="section hero">
+
+    <div class="hero-badges">
+      <span>DAM</span>
+      <span>Tenerife</span>
+      <span>C1 Inglés</span>
+      <span>Carnet B · Vehículo propio</span>
+    </div>
+
     <div class="profile-wrapper">
       <div class="profile-circle">
         <img src="assets/img/diego.jpeg" alt="Diego">
@@ -24,53 +47,151 @@
 
     <h1 class="neon-flow">Diego Gil</h1>
 
-    <p class="slogan">
-      Ingeniería de sistemas con mentalidad evolutiva.
+    <p class="hero-subtitle">
+      Busco prácticas DAM / Junior Developer
     </p>
 
-    <div class="scroll-indicator"></div>
+    <p class="hero-description">
+      Ingeniería de sistemas con mentalidad estructural.
+      Evolucionando hacia Full Stack con enfoque backend.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#contacto" class="btn-primary">Contactar</a>
+      <a href="assets/cv.pdf" class="btn-secondary" download>Descargar CV</a>
+    </div>
+
   </section>
 
-  <!-- QUIEN SOY -->
-  <section class="section reveal">
-    <div class="glass">
-      <h2>Quién soy</h2>
+  <!-- SOBRE MI -->
+  <section id="sobre" class="section two-columns reveal">
+
+    <div class="left">
+      <h2>Sobre mí</h2>
       <p>
         Estudiante de Desarrollo de Aplicaciones Multiplataforma en Tenerife.
-        Me interesa entender cómo funcionan los sistemas por dentro.
-        No me conformo con que algo funcione: quiero comprender su arquitectura.
+        Me interesa comprender cómo funcionan los sistemas desde su arquitectura interna.
+      </p>
+      <p>
+        No busco solo escribir código que funcione.
+        Busco diseñar soluciones limpias, escalables y bien estructuradas.
+      </p>
+      <p>
+        Trabajo con mentalidad ágil, aprendizaje continuo y visión a largo plazo.
       </p>
     </div>
+
+    <div class="right stats">
+      <div class="stat-card">
+        <h3>Enfoque</h3>
+        <p>Backend & Arquitectura limpia</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Objetivo</h3>
+        <p>Full Stack sólido</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Idiomas</h3>
+        <p>Español nativo · Inglés C1</p>
+      </div>
+    </div>
+
   </section>
 
-  <!-- MENTALIDAD -->
-  <section class="section reveal">
-    <div class="glass">
-      <h2>Mentalidad técnica</h2>
-      <p>
-        Trabajo con enfoque estructural, aprendizaje continuo y métodos ágiles.
-        Cada día avanzo hacia un perfil Full Stack sólido,
-        con especial interés en backend y diseño limpio de sistemas.
-      </p>
+  <!-- STACK -->
+  <section id="stack" class="section reveal">
+
+    <h2 class="section-title">Herramientas & Conocimientos</h2>
+
+    <div class="card-grid">
+
+      <div class="tech-card">
+        <h3>Java</h3>
+        <p>POO, estructuras de datos, lógica sólida.</p>
+        <div class="tags">
+          <span>POO</span>
+          <span>Collections</span>
+          <span>Streams</span>
+        </div>
+      </div>
+
+      <div class="tech-card">
+        <h3>SQL</h3>
+        <p>Modelado relacional y consultas optimizadas.</p>
+        <div class="tags">
+          <span>JOIN</span>
+          <span>WHERE</span>
+          <span>Normalización</span>
+        </div>
+      </div>
+
+      <div class="tech-card">
+        <h3>HTML & CSS</h3>
+        <p>Estructura semántica y diseño moderno.</p>
+        <div class="tags">
+          <span>Flexbox</span>
+          <span>Responsive</span>
+          <span>UI limpia</span>
+        </div>
+      </div>
+
     </div>
+
   </section>
 
   <!-- FORMACION -->
-  <section class="section reveal">
-    <div class="glass">
-      <h2>Formación</h2>
+  <section id="formacion" class="section reveal">
+    <h2>Formación</h2>
+    <div class="formation-box">
+      <h3>Grado Superior en Desarrollo de Aplicaciones Multiplataforma</h3>
       <p>
-        Grado Superior en Desarrollo de Aplicaciones Multiplataforma.
-        Evolución constante hacia arquitectura escalable y soluciones bien diseñadas.
+        Formación activa en programación, bases de datos,
+        estructuras de datos y arquitectura de sistemas.
       </p>
+      <p>
+        Evolución constante hacia soluciones escalables y diseño profesional.
+      </p>
+    </div>
+  </section>
+
+  <!-- APORTE -->
+  <section id="aporte" class="section reveal">
+    <h2>Qué puedo aportar</h2>
+
+    <div class="aporte-grid">
+
+      <div class="aporte-card">
+        <h3>Mentalidad estructural</h3>
+        <p>Entiendo el código como sistema, no como bloques aislados.</p>
+      </div>
+
+      <div class="aporte-card">
+        <h3>Aprendizaje rápido</h3>
+        <p>Capacidad de adaptación y mejora continua.</p>
+      </div>
+
+      <div class="aporte-card">
+        <h3>Compromiso profesional</h3>
+        <p>Disciplina, responsabilidad y enfoque en resultados.</p>
+      </div>
+
+      <div class="aporte-card">
+        <h3>Disponibilidad</h3>
+        <p>Prácticas DAM / Junior Dev · Tenerife o remoto.</p>
+      </div>
+
     </div>
   </section>
 
   <!-- CONTACTO -->
-  <section class="section reveal contact">
-    <div class="glass">
-      <h2>Contacto</h2>
-      <p class="contact-highlight">Tenerife · Disponible remoto</p>
+  <section id="contacto" class="section reveal contact-section">
+
+    <h2>Contacto</h2>
+
+    <div class="contact-box">
+      <p>Tenerife · Disponible remoto</p>
       <p class="contact-phone">+34 666 329 790</p>
 
       <div class="contact-links">
@@ -78,6 +199,7 @@
         <a href="https://github.com/diegoalegil" target="_blank">GitHub</a>
       </div>
     </div>
+
   </section>
 
   <script src="assets/js/main.js"></script>
