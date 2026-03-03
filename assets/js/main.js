@@ -84,3 +84,19 @@ document.addEventListener("DOMContentLoaded", function() {
   animate();
 
 });
+const stackItems = document.querySelectorAll(".stack-item");
+const techContents = document.querySelectorAll(".tech-content");
+
+stackItems.forEach(item => {
+  item.addEventListener("click", () => {
+
+    stackItems.forEach(i => i.classList.remove("active"));
+    techContents.forEach(c => c.classList.remove("active"));
+
+    item.classList.add("active");
+
+    const tech = item.dataset.tech;
+    document.getElementById(tech).classList.add("active");
+
+  });
+});
