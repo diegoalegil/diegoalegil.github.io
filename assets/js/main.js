@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             line.classList.add("visible");
 
-          }, 5 + (index * 5));
+          }, 300 + (index * 400));
 
         });
 
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             line.style.opacity = "1";
 
-          }, 1300 + (index * 1300));
+          }, 400 + (index * 300));
 
         });
 
@@ -183,46 +183,46 @@ document.addEventListener("DOMContentLoaded", () => {
     svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
     svg.classList.add('skill-line-svg');
 
-   // defs: linearGradient para stroke
-const defs = document.createElementNS(svgNS, 'defs');
-const grad = document.createElementNS(svgNS, 'linearGradient');
+    // defs: linearGradient para stroke
+    const defs = document.createElementNS(svgNS, 'defs');
+    const grad = document.createElementNS(svgNS, 'linearGradient');
 
-grad.setAttribute('id', 'skillGradient');
-grad.setAttribute('x1', '0%');
-grad.setAttribute('x2', '100%');
-grad.setAttribute('y1', '0%');
-grad.setAttribute('y2', '0%');
+    grad.setAttribute('id', 'skillGradient');
+    grad.setAttribute('x1', '0%');
+    grad.setAttribute('x2', '100%');
+    grad.setAttribute('y1', '0%');
+    grad.setAttribute('y2', '0%');
 
-[
-  { off: '0%', color: '#00f7ff' },
-  { off: '50%', color: '#6a00ff' },
-  { off: '100%', color: '#ff00cc' }
-].forEach(s => {
+    [
+      { off: '0%', color: '#00f7ff' },
+      { off: '50%', color: '#6a00ff' },
+      { off: '100%', color: '#ff00cc' }
+    ].forEach(s => {
 
-  const stop = document.createElementNS(svgNS, 'stop');
-  stop.setAttribute('offset', s.off);
-  stop.setAttribute('stop-color', s.color);
+      const stop = document.createElementNS(svgNS, 'stop');
+      stop.setAttribute('offset', s.off);
+      stop.setAttribute('stop-color', s.color);
 
-  grad.appendChild(stop);
+      grad.appendChild(stop);
 
-});
-
-
-// 🔥 ANIMACIÓN DEL GRADIENTE
-const animate = document.createElementNS(svgNS,'animateTransform');
-
-animate.setAttribute('attributeName','gradientTransform');
-animate.setAttribute('type','translate');
-animate.setAttribute('from','-1 0');
-animate.setAttribute('to','1 0');
-animate.setAttribute('dur','6s');
-animate.setAttribute('repeatCount','indefinite');
-
-grad.appendChild(animate);
+    });
 
 
-defs.appendChild(grad);
-svg.appendChild(defs);
+    // 🔥 ANIMACIÓN DEL GRADIENTE
+    const animate = document.createElementNS(svgNS, 'animateTransform');
+
+    animate.setAttribute('attributeName', 'gradientTransform');
+    animate.setAttribute('type', 'translate');
+    animate.setAttribute('from', '-1 0');
+    animate.setAttribute('to', '1 0');
+    animate.setAttribute('dur', '6s');
+    animate.setAttribute('repeatCount', 'indefinite');
+
+    grad.appendChild(animate);
+
+
+    defs.appendChild(grad);
+    svg.appendChild(defs);
     // helpers
     const count = skills.length;
     const innerW = w - padding.left - padding.right;
@@ -357,56 +357,72 @@ svg.appendChild(defs);
 
 const contact = document.querySelector(".contact-section");
 
-const contactObserver = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("visible");
+const contactObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.25 });
+
+if (contact) {
+  contactObserver.observe(contact);
 }
-});
-},{threshold:0.25});
-
-if(contact){
-contactObserver.observe(contact);
-}
 
 
-// PARALLAX DEL FONDO
-document.addEventListener("mousemove",(e)=>{
+let ticking = false;
 
-const x = (e.clientX / window.innerWidth) - 0.5;
-const y = (e.clientY / window.innerHeight) - 0.5;
+const bg = document.querySelector(".bg-parallax");
 
-document.body.style.backgroundPosition =
-`${50 + x*6}% ${50 + y*6}%`;
+document.addEventListener("mousemove", (e) => {
+
+  if (!ticking) {
+
+    requestAnimationFrame(() => {
+
+      const x = (e.clientX / window.innerWidth) - 0.5;
+      const y = (e.clientY / window.innerHeight) - 0.5;
+
+      bg.style.transform =
+        `translate(${x * 8}px, ${y * 8}px)`;
+
+      ticking = false;
+
+    });
+
+    ticking = true;
+
+  }
 
 });
 
 
 // EFECTO 3D EN TARJETAS
-document.querySelectorAll(".contact-card").forEach(card=>{
+document.querySelectorAll(".contact-card").forEach(card => {
 
-card.addEventListener("mousemove",(e)=>{
+  card.addEventListener("mousemove", (e) => {
 
-const rect = card.getBoundingClientRect();
+    const rect = card.getBoundingClientRect();
 
-const x = e.clientX - rect.left;
-const y = e.clientY - rect.top;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-const centerX = rect.width/2;
-const centerY = rect.height/2;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
 
-const rotateX = (y-centerY)/20;
-const rotateY = (centerX-x)/20;
+    const rotateX = (y - centerY) / 20;
+    const rotateY = (centerX - x) / 20;
 
-card.style.transform =
-`rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+    card.style.transform =
+      `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+
+  });
+
+  card.addEventListener("mouseleave", () => {
+
+    card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+
+  });
 
 });
 
-card.addEventListener("mouseleave",()=>{
-
-card.style.transform="rotateX(0) rotateY(0) scale(1)";
-
-});
-
-});

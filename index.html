@@ -32,7 +32,8 @@
     <div class="hero-layout">
 
       <div class="hero-photo">
-        <img src="assets/img/diego.jpeg" alt="Diego Gil">
+        <img src="assets/img/diego.jpeg" alt="Diego Gil" loading="lazy" width="360" height="360">
+
       </div>
 
       <div class="hero-text">
@@ -73,12 +74,59 @@
       </div>
 
       <div class="about-right reveal">
-        <img src="assets/img/javita.png" alt="Imagen decorativa">
+
+        <div class="code-window">
+
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="file-name">Diego.java</span>
+          </div>
+
+          <pre class="code-content"><code>
+<span class="keyword">public class</span> <span class="class">Diego</span> {
+
+  <span class="comment">// Identidad</span>
+  <span class="keyword">private</span> <span class="type">String</span> nombre = <span class="string">"Diego Gil"</span>;
+  <span class="keyword">private</span> <span class="type">String</span> rol = <span class="string">"Junior Developer"</span>;
+
+  <span class="comment">// Mentalidad</span>
+  <span class="keyword">private</span> <span class="type">boolean</span> curioso = <span class="value">true</span>;
+  <span class="keyword">private</span> <span class="type">boolean</span> creativo = <span class="value">true</span>;
+  <span class="keyword">private</span> <span class="type">boolean</span> obsesivoConDetalles = <span class="value">true</span>;
+
+  <span class="comment">// Skills</span>
+  <span class="keyword">private</span> <span class="type">String[]</span> stack = {
+      <span class="string">"Java"</span>,
+      <span class="string">"HTML"</span>,
+      <span class="string">"JavaScript"</span>,
+      <span class="string">"MySQL"</span>
+  };
+
+  <span class="comment">// Educación</span>
+  <span class="keyword">private</span> <span class="type">String</span> estudios =
+      <span class="string">"DAM · Desarrollo de Aplicaciones Multiplataforma"</span>;
+
+  <span class="comment">// Filosofía</span>
+  <span class="keyword">public void</span> construir() {
+      pensar();
+      programar();
+      mejorar();
+  }
+
+}
+</code></pre>
+
+        </div>
+
       </div>
 
     </div>
 
   </section>
+
+  <div class="bg-parallax"></div>
 
 
   <section id="stack" class="section dark">
@@ -246,7 +294,7 @@
 
 
   <footer>
-    © 2025 Diego Gil · DAM · Canarias
+    © 2026 Diego Gil · DAM · Canarias
   </footer>
 
 
