@@ -1,0 +1,122 @@
+.timeline {
+    grid-column: 1;
+
+    max-width: 800px;
+    position: relative;
+
+    padding-left: 100px;
+    margin: 0;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    bottom: 10px;
+
+    width: 4px;
+
+    background: linear-gradient(to bottom, #00f7ff, #ff00cc);
+
+    box-shadow:
+        0 0 25px rgba(0, 247, 255, .55),
+        0 0 40px rgba(255, 0, 200, .18);
+
+    border-radius: 2px;
+}
+
+.timeline-item {
+    will-change: transform, opacity;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .8s ease, transform .8s ease;
+    position: relative;
+
+    margin-bottom: 72px;
+    padding-left: 40px;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: -20px;
+    top: 26px;
+
+    width: 32px;
+    height: 2px;
+
+    background: #00f7ff;
+
+    box-shadow: 0 0 8px rgba(0, 247, 255, .45);
+}
+
+.timeline-item::after {
+    content: "";
+
+    position: absolute;
+
+    left: -28px;
+    top: 20px;
+
+    width: 10px;
+    height: 10px;
+
+    background: #00f7ff;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 10px #00f7ff,
+        0 0 20px rgba(0, 247, 255, .5);
+}
+
+
+.timeline-content {
+    max-width: 700px;
+
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    padding: 26px 32px;
+
+    font-size: 18px;
+
+    border-radius: 16px;
+
+    backdrop-filter: blur(10px);
+
+    transition: transform .35s cubic-bezier(.2, .8, .2, 1),
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.timeline-content h3 {
+    font-family: 'Orbitron';
+    font-size: 20px;
+    margin-bottom: 8px;
+
+    color: #00f7ff;
+}
+
+.timeline-content p {
+    color: var(--text-soft);
+    line-height: 1.6;
+}
+
+.timeline-content:hover {
+    transform: translateY(-6px);
+
+    border-color: #00f7ff;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .45),
+        0 0 20px rgba(0, 247, 255, .22);
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

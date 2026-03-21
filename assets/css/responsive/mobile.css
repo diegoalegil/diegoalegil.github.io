@@ -1,0 +1,111 @@
+@media (max-width: 900px) {
+  
+}
+@media (max-width: 900px) {
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-photo img {
+    width: 220px;
+    height: 220px;
+    margin: auto;
+  }
+
+  .hero-name .diego,
+  .hero-name .gil {
+    font-size: clamp(60px, 12vw, 100px);
+  }
+
+  .hero-info {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+}
+@media (max-width: 900px) {
+
+  .nav-container {
+    margin: 15px;
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+    font-size: 14px;
+  }
+
+}
+@media (max-width: 900px) {
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .card {
+    padding: 30px;
+    font-size: 20px;
+  }
+
+}
+@media (max-width: 900px) {
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+
+  .about-right img {
+    width: 100%;
+    transform: none;
+  }
+
+}
+@media (max-width: 900px) {
+
+  #formacion {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .timeline {
+    padding-left: 40px;
+  }
+
+}
+@media (max-width: 900px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact-right {
+    padding-left: 20px;
+  }
+
+}
+@media (max-width: 900px) {
+
+  .footer-content {
+    gap: 5px;
+  }
+
+  .footer-name {
+    font-size: 18px;
+  }
+
+  .footer-links {
+    font-size: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}

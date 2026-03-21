@@ -1,0 +1,48 @@
+/* ================= BOTONES BASE ================= */
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 25px;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* ================= BOTÓN PRINCIPAL ================= */
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--neon-pink), var(--accent-yellow));
+  color: black;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 200, 87, 0.6);
+}
+
+/* ================= BOTÓN SECUNDARIO ================= */
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-light);
+
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-secondary:hover {
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 15px rgba(0,247,255,0.3);
+}
+
+/* ================= ESPECÍFICO NAV ================= */
+
+.btn-contacto {
+  padding: 7px 20px;
+  font-size: 13px;
+}

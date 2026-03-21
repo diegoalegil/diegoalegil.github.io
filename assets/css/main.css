@@ -1,0 +1,29 @@
+/* BASE */
+@import url("./base/variables.css");
+@import url("./base/reset.css");
+@import url("./base/global.css");
+
+/* LAYOUT */
+@import url("./layout/nav.css");
+@import url("./layout/footer.css");
+
+/* COMPONENTS */
+@import url("./components/buttons.css");
+@import url("./components/cards.css");
+@import url("./components/code-window.css");
+@import url("./components/timeline.css");
+
+/* SECTIONS */
+@import url("./sections/hero.css");
+@import url("./sections/about.css");
+@import url("./sections/stack.css");
+@import url("./sections/formacion.css");
+@import url("./sections/contacto.css");
+
+/* EFFECTS */
+@import url("./effects/animations.css");
+@import url("./effects/glow.css");
+@import url("./effects/particles.css");
+
+/* RESPONSIVE */
+@import url("./responsive/mobile.css");

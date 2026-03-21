@@ -159,11 +159,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // SKILL LINE CHART - crea SVG animado dentro de .skill-chart-stage
 (function () {
   const skills = [
-    { name: 'DAM', value: 50 },
-    { name: 'MOTIVACIÓN', value: 100 },
-    { name: 'BACKEND', value: 60 },
-    { name: 'FRONTEND', value: 55 },
-    { name: 'BASES DATOS', value: 70 }
+    { name: 'DAM (1º año)', value: 45 },
+    { name: 'Motivación', value: 100 },
+    { name: 'Java / Backend básico', value: 40 },
+    { name: 'HTML · CSS · JS', value: 35 },
+    { name: 'Bases de datos (SQL)', value: 40 }
   ];
 
   // crea el SVG y lo inserta en containerSelector
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // dimensiones basadas en viewport (se escalará con viewBox)
     const w = Math.min(720, Math.max(420, Math.round(window.innerWidth * 0.36)));
-    const h = 220;
+    const h = 360;
     const padding = { left: 28, right: 28, top: 28, bottom: 36 };
 
     const svgNS = 'http://www.w3.org/2000/svg';
@@ -425,4 +425,3 @@ document.querySelectorAll(".contact-card").forEach(card => {
   });
 
 });
-
