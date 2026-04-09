@@ -1,7 +1,25 @@
+/* =============================================
+   RESPONSIVE — max-width: 900px (tablet + mobile)
+   ============================================= */
+
 @media (max-width: 900px) {
-  
-}
-@media (max-width: 900px) {
+
+  /* NAV */
+  .nav-container {
+    margin: 15px;
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  /* HERO: apilar columnas verticalmente */
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
   .hero-layout {
     grid-template-columns: 1fr;
@@ -20,29 +38,90 @@
     font-size: clamp(60px, 12vw, 100px);
   }
 
+  /* Resetear el translateX(40%) que desborda en pantallas pequeñas */
+  .hero-name .gil {
+    transform: none;
+    margin-top: -8px;
+  }
+
   .hero-info {
     position: static;
     width: 100%;
     margin-top: 20px;
     text-align: center;
+    padding: 25px 20px;
   }
 
-}
-@media (max-width: 900px) {
-
-  .nav-container {
-    margin: 15px;
-    padding: 0 20px;
+  /* TÍTULOS DE SECCIÓN */
+  #sobre-mi .section-title {
+    font-size: clamp(30px, 8vw, 74px);
   }
 
-  .nav-links {
-    gap: 20px;
-    font-size: 14px;
+  #stack .section-title {
+    font-size: clamp(30px, 8vw, 80px);
   }
 
-}
-@media (max-width: 900px) {
+  .section-title {
+    font-size: clamp(28px, 7vw, 60px);
+  }
 
+  .contact-title {
+    font-size: clamp(26px, 7vw, 64px);
+  }
+
+  /* ABOUT */
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+
+  /* Permite que los grid items se contraigan por debajo de su min-content */
+  .about-left,
+  .about-right {
+    min-width: 0;
+  }
+
+  .about-right img {
+    width: 100%;
+    transform: none;
+  }
+
+  .about-text {
+    font-size: 17px;
+    max-width: 100%;
+  }
+
+  .code-window {
+    width: 100%;
+    transform: none;
+  }
+
+  /* Ocultar el code window en mobile: demasiado alto y no legible */
+  .about-right {
+    display: none;
+  }
+
+  .about-left {
+    max-width: 100%;
+  }
+
+  /* Asegurar que el stack sequence no desborde */
+  .stack-sequence {
+    display: none;
+  }
+
+  /* Fondo sólido en las tarjetas para evitar bleeding visual */
+  .card {
+    background: rgba(10, 0, 30, 0.85);
+  }
+
+  /* SKILLS CHART: ocultar labels del eje X para evitar solapamiento */
+  .key-label {
+    display: none;
+  }
+
+  /* STACK */
   .cards-grid {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -53,35 +132,50 @@
     font-size: 20px;
   }
 
-}
-@media (max-width: 900px) {
+  .stack-layout {
+    flex-direction: column;
+    gap: 50px;
+  }
 
-  .about-container {
-    grid-template-columns: 1fr;
-    gap: 60px;
+  .stack-sequence {
+    font-size: clamp(24px, 6vw, 48px);
+    align-items: center;
     text-align: center;
   }
 
-  .about-right img {
-    width: 100%;
-    transform: none;
-  }
-
-}
-@media (max-width: 900px) {
-
+  /* FORMACIÓN */
   #formacion {
     grid-template-columns: 1fr;
     gap: 40px;
+    padding-top: 60px;
+  }
+
+  /* Título rotado → display normal en mobile */
+  #formacion .section-title {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    font-size: clamp(28px, 8vw, 60px);
+    margin-bottom: 40px;
+    letter-spacing: 2px;
   }
 
   .timeline {
     padding-left: 40px;
   }
 
-}
-@media (max-width: 900px) {
+  /* Decoradores del timeline ajustados al espacio disponible */
+  .timeline-item::before {
+    left: -48px;
+  }
 
+  .timeline-item::after {
+    left: -48px;
+    width: 50px;
+  }
+
+  /* CONTACTO */
   .contact-container {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -89,11 +183,10 @@
 
   .contact-right {
     padding-left: 20px;
+    max-width: 100%;
   }
 
-}
-@media (max-width: 900px) {
-
+  /* FOOTER */
   .footer-content {
     gap: 5px;
   }
@@ -106,6 +199,84 @@
     font-size: 14px;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+}
+
+
+/* =============================================
+   HAMBURGER MENU — max-width: 600px (mobile)
+   ============================================= */
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 600px) {
+
+  /* Nav container ocupa todo el ancho disponible */
+  .nav-container {
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+
+  /* Menú oculto por defecto: overlay pantalla completa */
+  .nav-links {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 0, 20, 0.97);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    z-index: 998;
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 22px;
+    gap: 0;
+  }
+
+  /* Botón hamburger visible */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-light, #f2edff);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Animación X al abrir */
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 
 }
