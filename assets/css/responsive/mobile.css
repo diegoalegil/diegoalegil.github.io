@@ -1,4 +1,83 @@
 /* =============================================
+   RESPONSIVE — max-width: 1280px (laptops medianos)
+   ============================================= */
+
+@media (max-width: 1280px) {
+
+  /* HERO: reducir columna de foto y el gap */
+  .hero-layout {
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+  }
+
+  .hero-photo img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-name .diego,
+  .hero-name .gil {
+    font-size: clamp(80px, 8vw, 130px);
+  }
+
+  /* Resetear translateX(40%) que desborda en pantallas medianas */
+  .hero-name .gil {
+    transform: none;
+  }
+
+  /* ABOUT: min-width:0 evita que el code-window expanda el grid */
+  .about-left,
+  .about-right {
+    min-width: 0;
+  }
+
+  .about-container {
+    gap: 60px;
+  }
+
+  /* STACK: reducir gap y tamaño del sequence */
+  .stack-layout {
+    gap: 60px;
+  }
+
+  .stack-sequence {
+    font-size: clamp(28px, 3vw, 40px);
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 40px;
+  }
+
+}
+
+
+/* =============================================
+   RESPONSIVE — max-width: 1100px (formación single-column)
+   ============================================= */
+
+@media (max-width: 1100px) {
+
+  /* formacion.css cambia a 1 columna en ≤1100px pero el título sigue rotado */
+  #formacion .section-title {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    font-size: clamp(36px, 5vw, 80px);
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+
+  #formacion {
+    padding-top: 80px;
+  }
+
+}
+
+
+/* =============================================
    RESPONSIVE — max-width: 900px (tablet + mobile)
    ============================================= */
 
