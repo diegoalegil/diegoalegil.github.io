@@ -35,9 +35,16 @@
 
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
-  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- Preload de assets críticos del viewport inicial -->
+  <link rel="preload" as="image" href="assets/img/hero-sky.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/diego.jpeg" fetchpriority="high">
 
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Inter&display=swap" rel="stylesheet">
+  <!-- Preconnect a CDNs externos para abrir conexión cuanto antes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/main.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap"
     rel="stylesheet">
