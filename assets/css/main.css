@@ -708,12 +708,14 @@ section {
 .project-media--garage    { background: linear-gradient(135deg, #4a1d00, #ff7a18 60%, #ffb14a); }
 .project-media--miniature { background: linear-gradient(135deg, #4d0a0a, #c0392b 60%, #f1c40f); }
 
-/* AnimeShowdown lleva poster vertical 2:3, contain para que entre completo */
+/* AnimeShowdown: poster vertical 2:3 dentro de un contenedor 4:3.
+   Con cover y object-position hacia arriba mostramos la cara + título
+   "HIMENO" llenando todo el media, sin bandas vacías. */
 .project-media--anime img {
-  width: auto;
+  width: 100%;
   height: 100%;
-  max-width: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center 22%;
 }
 
 .project-body {
