@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           setTimeout(() => {
             card.classList.add("visible");
-          }, index * 220);
+          }, index * 70);
 
         });
 

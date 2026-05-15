@@ -284,6 +284,72 @@
 
 
 /* =============================================
+   STACK GRID — overrides específicos por las 3 categorías x 4 cards
+   ============================================= */
+
+@media (max-width: 1280px) {
+  #stack .cards-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  #stack .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .stack-category-title {
+    font-size: 17px;
+    letter-spacing: 3px;
+  }
+
+  #stack .card {
+    padding: 18px 14px;
+  }
+
+  #stack .card h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  #stack .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  #stack .card {
+    padding: 16px 12px;
+  }
+
+  #stack .card h3 {
+    font-size: 15px;
+  }
+
+  #stack .card p {
+    font-size: 12px;
+  }
+
+  #stack .tech-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .stack-category {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 380px) {
+  #stack .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =============================================
    HAMBURGER MENU — max-width: 600px (mobile)
    ============================================= */
 
