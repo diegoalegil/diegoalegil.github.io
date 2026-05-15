@@ -15,7 +15,6 @@
 
   <link rel="canonical" href="https://diegoalegil.github.io/">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://diegoalegil.github.io/">
   <meta property="og:title" content="Diego Gil — Backend · Bases de datos · DAM">
@@ -26,7 +25,6 @@
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Diego Gil">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Diego Gil — Backend · Bases de datos · DAM">
   <meta name="twitter:description"
@@ -35,121 +33,111 @@
 
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
-  <!-- Preload de assets críticos del viewport inicial -->
   <link rel="preload" as="image" href="assets/img/hero-sky.webp" type="image/webp" fetchpriority="high">
   <link rel="preload" as="image" href="assets/img/diego.jpeg" fetchpriority="high">
 
-  <!-- Preconnect a CDNs externos para abrir conexión cuanto antes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
   <link rel="stylesheet" href="assets/css/main.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
 </head>
 
 <body>
 
-  <section class="hero" id="inicio">
-
-    <nav class="nav">
-      <div class="nav-container">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#stack">Stack</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#formacion">Formación</a></li>
-          <li><a href="#contacto" class="btn-contacto">Contactar</a></li>
-        </ul>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación"
-          aria-expanded="false" aria-controls="navLinks">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </button>
-      </div>
-    </nav>
-
-    <div class="hero-layout">
-
-      <div class="hero-photo">
-        <img src="assets/img/diego.jpeg"
-          alt="Retrato de Diego Gil, desarrollador backend en prácticas en la Fundación General de la ULL"
-          width="360" height="360" fetchpriority="high" decoding="async">
-
-      </div>
-
-      <div class="hero-text">
-        <h1 class="hero-name">
-          <span class="diego">DIEGO</span>
-          <span class="gil">GIL</span>
-        </h1>
-      </div>
-
+  <!-- ================= NAV ================= -->
+  <nav class="nav">
+    <div class="nav-pill">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#contacto" class="btn-contacto">Contactar</a></li>
+      </ul>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false"
+      aria-controls="navLinks">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </nav>
 
-    <div class="hero-info">
-      <p class="hero-sub">PRÁCTICAS EN FUNDACIÓN GENERAL ULL · DAM</p>
-      <p class="hero-tagline">BACKEND · BASES DE DATOS · ARQUITECTURA</p>
-    </div>
 
-  </section>
+  <!-- ================= HERO ================= -->
+  <header class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-grid">
 
-
-  <section id="sobre-mi" class="section">
-
-    <div class="about-container">
-
-      <div class="about-left reveal">
-        <h2 class="section-title">Sobre mí</h2>
-
-        <p class="about-text reveal">
-          Estudiante de <span>Desarrollo de Aplicaciones Multiplataforma</span>.
-          Me obsesiona entender cómo funcionan las cosas por dentro y construir soluciones que realmente aporten valor.
-        </p>
-
-        <div class="atributos">
-          <div><span>🎓</span> DAM Tenerife</div>
-          <div><span>🌍</span> C1 Inglés</div>
-          <div><span>🚗</span> Carnet B</div>
-          <div><span>💼</span> Prácticas ULL</div>
+        <div class="hero-photo">
+          <img src="assets/img/diego.jpeg"
+            alt="Retrato de Diego Gil, desarrollador backend en prácticas en la Fundación General de la ULL"
+            width="320" height="320" fetchpriority="high" decoding="async">
         </div>
-      </div>
 
-      <div class="about-right reveal">
+        <div class="hero-text">
+          <h1 class="hero-name">
+            <span>DIEGO</span>
+            <span>GIL</span>
+          </h1>
 
-        <div class="code-window">
-
-          <div class="code-header">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="file-name">Diego.java</span>
+          <div class="hero-info">
+            <p class="hero-sub">Prácticas en Fundación General ULL · DAM</p>
+            <p class="hero-tagline">Backend · Bases de datos · Arquitectura</p>
           </div>
+        </div>
 
-          <pre class="code-content"><code>
-<span class="keyword">public class</span> <span class="class">Diego</span> {
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ================= SOBRE MÍ ================= -->
+  <section id="sobre-mi">
+    <div class="container">
+      <h2 class="section-title reveal">Sobre mí</h2>
+
+      <div class="about-grid">
+
+        <div class="reveal">
+          <p class="about-text">
+            Estudiante de <strong>Desarrollo de Aplicaciones Multiplataforma</strong> en Tenerife.
+            Me obsesiona entender cómo funcionan las cosas por dentro y construir
+            soluciones que aporten valor real.
+          </p>
+
+          <div class="atributos">
+            <div><span>🎓</span> DAM Tenerife</div>
+            <div><span>🌍</span> C1 Inglés</div>
+            <div><span>🚗</span> Carnet B</div>
+            <div><span>💼</span> Prácticas ULL</div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="code-window">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="file-name">Diego.java</span>
+            </div>
+            <pre class="code-content"><code><span class="keyword">public class</span> <span class="class">Diego</span> {
 
   <span class="comment">// Identidad</span>
   <span class="keyword">private</span> <span class="type">String</span> nombre = <span class="string">"Diego Gil"</span>;
-  <span class="keyword">private</span> <span class="type">String</span> rol = <span class="string">"Junior Developer"</span>;
+  <span class="keyword">private</span> <span class="type">String</span> rol = <span class="string">"Backend Developer"</span>;
 
-  <span class="comment">// Mentalidad</span>
-  <span class="keyword">private</span> <span class="type">boolean</span> curioso = <span class="value">true</span>;
-  <span class="keyword">private</span> <span class="type">boolean</span> creativo = <span class="value">true</span>;
-  <span class="keyword">private</span> <span class="type">boolean</span> obsesivoConDetalles = <span class="value">true</span>;
-
-  <span class="comment">// Skills</span>
+  <span class="comment">// Stack actual</span>
   <span class="keyword">private</span> <span class="type">String[]</span> stack = {
-      <span class="string">"Java"</span>,
-      <span class="string">"Spring Boot"</span>,
-      <span class="string">"PostgreSQL"</span>,
-      <span class="string">"Node.js"</span>,
-      <span class="string">"JavaScript"</span>,
-      <span class="string">"PHP"</span>
+      <span class="string">"Java"</span>, <span class="string">"Spring Boot"</span>, <span class="string">"PostgreSQL"</span>,
+      <span class="string">"Node.js"</span>, <span class="string">"JavaScript"</span>, <span class="string">"PHP"</span>
   };
 
   <span class="comment">// Ahora aprendiendo</span>
@@ -159,460 +147,422 @@
       <span class="string">"APIs REST"</span>
   };
 
-  <span class="comment">// Educación</span>
-  <span class="keyword">private</span> <span class="type">String</span> estudios =
-      <span class="string">"DAM · Desarrollo de Aplicaciones Multiplataforma"</span>;
-
   <span class="comment">// Filosofía</span>
   <span class="keyword">public void</span> construir() {
       pensar();
       programar();
       mejorar();
   }
-
-}
-</code></pre>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <div class="bg-parallax"></div>
-
-
-  <section id="stack" class="section dark">
-
-    <h2 class="section-title">Stack</h2>
-
-    <div class="stack-layout">
-
-      <div class="stack-cards">
-
-        <div class="stack-category">
-          <h3 class="stack-category-title">Backend</h3>
-          <div class="cards-grid">
-
-            <div class="card java reveal">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="tech-icon"
-                alt="Logo de Java" loading="lazy" decoding="async">
-              <h3>Java</h3>
-              <p>POO y APIs REST</p>
-            </div>
-
-            <div class="card spring reveal">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" class="tech-icon"
-                alt="Logo de Spring Boot" loading="lazy" decoding="async">
-              <h3>Spring Boot</h3>
-              <p>JWT, JPA, microservicios</p>
-            </div>
-
-            <div class="card node reveal">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="tech-icon"
-                alt="Logo de Node.js" loading="lazy" decoding="async">
-              <h3>Node.js</h3>
-              <p>Servicios distribuidos</p>
-            </div>
-
-            <div class="card php reveal">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="tech-icon"
-                alt="Logo de PHP" loading="lazy" decoding="async">
-              <h3>PHP</h3>
-              <p>Backend WordPress y APIs</p>
-            </div>
-
+}</code></pre>
           </div>
         </div>
 
-        <div class="stack-category">
-          <h3 class="stack-category-title">Bases de datos</h3>
-          <div class="cards-grid">
+      </div>
+    </div>
+  </section>
 
-            <div class="card postgres reveal">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                class="tech-icon" alt="Logo de PostgreSQL" loading="lazy" decoding="async">
-              <h3>PostgreSQL</h3>
-              <p>PL/pgSQL, triggers, ACID</p>
+
+  <!-- ================= STACK ================= -->
+  <section id="stack">
+    <div class="container">
+      <h2 class="section-title reveal">Stack</h2>
+
+      <div class="stack-cat reveal">
+        <h3 class="stack-cat-title">Backend</h3>
+        <div class="tech-grid">
+
+          <article class="tech-card tech-card--java">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="tech-icon"
+              alt="Logo de Java" loading="lazy" decoding="async">
+            <h3>Java</h3>
+            <p>POO, APIs REST</p>
+          </article>
+
+          <article class="tech-card tech-card--spring">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" class="tech-icon"
+              alt="Logo de Spring Boot" loading="lazy" decoding="async">
+            <h3>Spring Boot</h3>
+            <p>JWT, JPA, microservicios</p>
+          </article>
+
+          <article class="tech-card tech-card--node">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="tech-icon"
+              alt="Logo de Node.js" loading="lazy" decoding="async">
+            <h3>Node.js</h3>
+            <p>Servicios distribuidos</p>
+          </article>
+
+          <article class="tech-card tech-card--php">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="tech-icon"
+              alt="Logo de PHP" loading="lazy" decoding="async">
+            <h3>PHP</h3>
+            <p>WordPress y APIs</p>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="stack-cat reveal">
+        <h3 class="stack-cat-title">Bases de datos</h3>
+        <div class="tech-grid">
+
+          <article class="tech-card tech-card--postgres">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              class="tech-icon" alt="Logo de PostgreSQL" loading="lazy" decoding="async">
+            <h3>PostgreSQL</h3>
+            <p>PL/pgSQL, triggers, ACID</p>
+          </article>
+
+          <article class="tech-card tech-card--cockroach">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Logo de CockroachDB">
+              <path d="M12 2 L4 5.2 V12 C4 16.6 7.4 20.6 12 22 C16.6 20.6 20 16.6 20 12 V5.2 L12 2Z"
+                fill="#6933FF" stroke="#a07cff" stroke-width="0.4" />
+              <text x="12" y="15.3" text-anchor="middle" font-family="Orbitron, sans-serif"
+                font-size="9" font-weight="700" fill="#ffffff">C</text>
+            </svg>
+            <h3>CockroachDB</h3>
+            <p>SQL distribuido</p>
+          </article>
+
+          <article class="tech-card tech-card--mysql">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="tech-icon"
+              alt="Logo de MySQL" loading="lazy" decoding="async">
+            <h3>MySQL</h3>
+            <p>Consultas relacionales</p>
+          </article>
+
+          <article class="tech-card tech-card--sqlite">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" class="tech-icon"
+              alt="Logo de SQLite" loading="lazy" decoding="async">
+            <h3>SQLite</h3>
+            <p>Persistencia embebida</p>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="stack-cat reveal">
+        <h3 class="stack-cat-title">Web</h3>
+        <div class="tech-grid">
+
+          <article class="tech-card tech-card--js">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              class="tech-icon" alt="Logo de JavaScript" loading="lazy" decoding="async">
+            <h3>JavaScript</h3>
+            <p>Lógica e interactividad</p>
+          </article>
+
+          <article class="tech-card tech-card--html">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="tech-icon"
+              alt="Logo de HTML5" loading="lazy" decoding="async">
+            <h3>HTML</h3>
+            <p>Estructura semántica</p>
+          </article>
+
+          <article class="tech-card tech-card--css">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="tech-icon"
+              alt="Logo de CSS3" loading="lazy" decoding="async">
+            <h3>CSS</h3>
+            <p>Animaciones y responsive</p>
+          </article>
+
+          <article class="tech-card tech-card--wp">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
+              class="tech-icon" alt="Logo de WordPress" loading="lazy" decoding="async">
+            <h3>WordPress</h3>
+            <p>Temas y WooCommerce</p>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="sequence reveal">
+        <span class="seq-word seq-word--think">Pensar</span>
+        <span class="seq-conn" aria-hidden="true"></span>
+        <span class="seq-word seq-word--build">Construir</span>
+        <span class="seq-conn" aria-hidden="true"></span>
+        <span class="seq-word seq-word--improve">Mejorar</span>
+        <span class="seq-conn" aria-hidden="true"></span>
+        <span class="seq-word seq-word--repeat">Línea tras línea</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= PROYECTOS ================= -->
+  <section id="proyectos">
+    <div class="container">
+      <h2 class="section-title reveal">Proyectos</h2>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-media project-media--canarias">
+            <span class="project-media-icon" aria-hidden="true">🏛️</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Canarias Convive</h3>
+            <p class="project-desc">Automatización del flujo de gestión de facturas con validaciones en cascada y
+              trazabilidad documento a documento.</p>
+            <div class="project-badges">
+              <span class="project-badge">Google Apps Script</span>
+              <span class="project-badge">Next.js</span>
+              <span class="project-badge">Vercel</span>
+              <span class="project-badge">Google Sheets</span>
             </div>
+          </div>
+          <div class="project-footer">
+            <span class="project-status">🏛️ Prácticas profesionales</span>
+          </div>
+        </article>
 
-            <div class="card cockroach reveal">
-              <svg class="tech-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Logo de CockroachDB">
-                <path d="M12 2 L4 5.2 V12 C4 16.6 7.4 20.6 12 22 C16.6 20.6 20 16.6 20 12 V5.2 L12 2Z"
-                  fill="#6933FF" stroke="#a07cff" stroke-width="0.4"/>
-                <text x="12" y="15.3" text-anchor="middle" font-family="Orbitron, sans-serif"
-                  font-size="9" font-weight="700" fill="#ffffff">C</text>
+        <article class="project-card reveal">
+          <div class="project-media project-media--anime">
+            <img src="assets/img/reze.webp" alt="Poster fan-art estilo manga del proyecto AnimeShowdown"
+              loading="lazy" decoding="async">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">AnimeShowdown</h3>
+            <p class="project-desc">Torneos y ranking ELO de personajes anime. Backend con autenticación JWT y
+              persistencia en PostgreSQL.</p>
+            <div class="project-badges">
+              <span class="project-badge">Spring Boot 3</span>
+              <span class="project-badge">JWT</span>
+              <span class="project-badge">PostgreSQL</span>
+              <span class="project-badge">Jikan API</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/diegoalegil/AnimeShowdown" target="_blank" rel="noopener" class="project-link"
+              aria-label="Ver el repositorio de AnimeShowdown en GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
               </svg>
-              <h3>CockroachDB</h3>
-              <p>SQL distribuido tolerante a fallos</p>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-media project-media--tinerpay">
+            <span class="project-media-icon" aria-hidden="true">💳</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">TinerPay</h3>
+            <p class="project-desc">Sistema de pagos distribuido tolerante a fallos sobre una base de datos SQL
+              global.</p>
+            <div class="project-badges">
+              <span class="project-badge">Node.js</span>
+              <span class="project-badge">CockroachDB</span>
+              <span class="project-badge">REST</span>
             </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/diegoalegil/TinerPay" target="_blank" rel="noopener" class="project-link"
+              aria-label="Ver el repositorio de TinerPay en GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </article>
 
-            <div class="card mysql reveal">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="tech-icon"
-                alt="Logo de MySQL" loading="lazy" decoding="async">
-              <h3>MySQL</h3>
-              <p>Modelado y consultas relacionales</p>
+        <article class="project-card reveal">
+          <div class="project-media project-media--postgres">
+            <span class="project-media-icon" aria-hidden="true">🐘</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">postgresql-avanzado</h3>
+            <p class="project-desc">Laboratorio de PL/pgSQL, triggers, transacciones ACID y estrategias de backup.</p>
+            <div class="project-badges">
+              <span class="project-badge">PostgreSQL</span>
+              <span class="project-badge">PL/pgSQL</span>
+              <span class="project-badge">Triggers</span>
+              <span class="project-badge">Backups</span>
             </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/diegoalegil/postgresql-avanzado" target="_blank" rel="noopener"
+              class="project-link" aria-label="Ver el repositorio postgresql-avanzado en GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </article>
 
-            <div class="card sqlite reveal">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" class="tech-icon"
-                alt="Logo de SQLite" loading="lazy" decoding="async">
-              <h3>SQLite</h3>
-              <p>Persistencia local embebida</p>
+        <article class="project-card reveal">
+          <div class="project-media project-media--garage">
+            <span class="project-media-icon" aria-hidden="true">🔧</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">garage-os</h3>
+            <p class="project-desc">Gestor de mantenimiento de vehículos: revisiones, gastos e historial por coche.</p>
+            <div class="project-badges">
+              <span class="project-badge">JavaFX</span>
+              <span class="project-badge">SQLite</span>
+              <span class="project-badge">Java</span>
             </div>
-
           </div>
-        </div>
+          <div class="project-footer">
+            <a href="https://github.com/diegoalegil/garage-os" target="_blank" rel="noopener" class="project-link"
+              aria-label="Ver el repositorio garage-os en GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </article>
 
-        <div class="stack-category">
-          <h3 class="stack-category-title">Web</h3>
-          <div class="cards-grid">
-
-            <div class="card js reveal">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                class="tech-icon" alt="Logo de JavaScript" loading="lazy" decoding="async">
-              <h3>JavaScript</h3>
-              <p>Lógica e interactividad</p>
+        <article class="project-card reveal">
+          <div class="project-media project-media--miniature">
+            <span class="project-media-icon" aria-hidden="true">🏎️</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">miniature-car-shop</h3>
+            <p class="project-desc">Tienda premium de coches en miniatura sobre WordPress + WooCommerce. Tema y plugins
+              propios.</p>
+            <div class="project-badges">
+              <span class="project-badge">WordPress</span>
+              <span class="project-badge">WooCommerce</span>
+              <span class="project-badge">PHP</span>
+              <span class="project-badge">JavaScript</span>
             </div>
-
-            <div class="card html reveal">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="tech-icon"
-                alt="Logo de HTML5" loading="lazy" decoding="async">
-              <h3>HTML</h3>
-              <p>Estructura semántica</p>
-            </div>
-
-            <div class="card css-card reveal">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="tech-icon"
-                alt="Logo de CSS3" loading="lazy" decoding="async">
-              <h3>CSS</h3>
-              <p>Animaciones y responsive</p>
-            </div>
-
-            <div class="card wordpress reveal">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
-                class="tech-icon" alt="Logo de WordPress" loading="lazy" decoding="async">
-              <h3>WordPress</h3>
-              <p>Temas, plugins y WooCommerce</p>
-            </div>
-
           </div>
-        </div>
-
-      </div>
-
-      <div class="stack-sequence">
-
-        <div class="seq-line java-word">Pensar</div>
-        <div class="connector"></div>
-
-        <div class="seq-line html-word">Construir</div>
-        <div class="connector"></div>
-
-        <div class="seq-line js-word">Mejorar</div>
-        <div class="connector"></div>
-
-        <div class="seq-line mysql-word">Línea tras línea</div>
-
-      </div>
-
-    </div> <!-- stack-layout -->
-
-  </section>
-
-
-  <section id="proyectos" class="section">
-
-    <h2 class="section-title reveal">Proyectos</h2>
-
-    <div class="projects-grid">
-
-      <article class="project-card reveal">
-        <div class="project-media project-media--canarias">
-          <span class="project-media-icon" aria-hidden="true">🏛️</span>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Canarias Convive</h3>
-          <p class="project-desc">Automatización del flujo de gestión de facturas. Validaciones y trazabilidad de cada documento.</p>
-          <div class="project-badges">
-            <span class="project-badge">Google Apps Script</span>
-            <span class="project-badge">Next.js</span>
-            <span class="project-badge">Vercel</span>
-            <span class="project-badge">Google Sheets</span>
+          <div class="project-footer">
+            <a href="https://github.com/diegoalegil/miniature-car-shop" target="_blank" rel="noopener"
+              class="project-link" aria-label="Ver el repositorio miniature-car-shop en GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
+              </svg>
+              <span>GitHub</span>
+            </a>
           </div>
-        </div>
-        <div class="project-footer">
-          <span class="project-status">🏛️ Prácticas profesionales</span>
-        </div>
-      </article>
+        </article>
 
-      <article class="project-card reveal">
-        <div class="project-media">
-          <img src="assets/img/reze.webp"
-            alt="Poster fan-art estilo manga del proyecto AnimeShowdown"
-            loading="lazy" decoding="async">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">AnimeShowdown</h3>
-          <p class="project-desc">Torneos y ranking ELO de personajes anime. Backend con autenticación JWT y persistencia en PostgreSQL.</p>
-          <div class="project-badges">
-            <span class="project-badge">Spring Boot 3</span>
-            <span class="project-badge">JWT</span>
-            <span class="project-badge">PostgreSQL</span>
-            <span class="project-badge">Jikan API</span>
-          </div>
-        </div>
-        <div class="project-footer">
-          <a href="https://github.com/diegoalegil/AnimeShowdown" target="_blank" rel="noopener"
-            class="project-link" aria-label="Ver el repositorio de AnimeShowdown en GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z"/>
-            </svg>
-            <span>GitHub</span>
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-media project-media--tinerpay">
-          <span class="project-media-icon" aria-hidden="true">💳</span>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">TinerPay</h3>
-          <p class="project-desc">Sistema de pagos distribuido. Tolerante a fallos sobre una base de datos SQL global.</p>
-          <div class="project-badges">
-            <span class="project-badge">Node.js</span>
-            <span class="project-badge">CockroachDB</span>
-            <span class="project-badge">REST</span>
-          </div>
-        </div>
-        <div class="project-footer">
-          <a href="https://github.com/diegoalegil/TinerPay" target="_blank" rel="noopener"
-            class="project-link" aria-label="Ver el repositorio de TinerPay en GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z"/>
-            </svg>
-            <span>GitHub</span>
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-media project-media--postgres">
-          <span class="project-media-icon" aria-hidden="true">🐘</span>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">postgresql-avanzado</h3>
-          <p class="project-desc">Laboratorio de PL/pgSQL, triggers, transacciones ACID y estrategias de backup.</p>
-          <div class="project-badges">
-            <span class="project-badge">PostgreSQL</span>
-            <span class="project-badge">PL/pgSQL</span>
-            <span class="project-badge">Triggers</span>
-            <span class="project-badge">Backups</span>
-          </div>
-        </div>
-        <div class="project-footer">
-          <a href="https://github.com/diegoalegil/postgresql-avanzado" target="_blank" rel="noopener"
-            class="project-link" aria-label="Ver el repositorio postgresql-avanzado en GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z"/>
-            </svg>
-            <span>GitHub</span>
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-media project-media--garage">
-          <span class="project-media-icon" aria-hidden="true">🔧</span>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">garage-os</h3>
-          <p class="project-desc">Gestor de mantenimiento de vehículos: revisiones, gastos e historial por coche.</p>
-          <div class="project-badges">
-            <span class="project-badge">JavaFX</span>
-            <span class="project-badge">SQLite</span>
-            <span class="project-badge">Java</span>
-          </div>
-        </div>
-        <div class="project-footer">
-          <a href="https://github.com/diegoalegil/garage-os" target="_blank" rel="noopener"
-            class="project-link" aria-label="Ver el repositorio garage-os en GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z"/>
-            </svg>
-            <span>GitHub</span>
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-media project-media--miniature">
-          <span class="project-media-icon" aria-hidden="true">🏎️</span>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">miniature-car-shop</h3>
-          <p class="project-desc">Tienda premium de coches en miniatura sobre WordPress + WooCommerce. Tema y plugins propios.</p>
-          <div class="project-badges">
-            <span class="project-badge">WordPress</span>
-            <span class="project-badge">WooCommerce</span>
-            <span class="project-badge">PHP</span>
-            <span class="project-badge">JavaScript</span>
-          </div>
-        </div>
-        <div class="project-footer">
-          <a href="https://github.com/diegoalegil/miniature-car-shop" target="_blank" rel="noopener"
-            class="project-link" aria-label="Ver el repositorio miniature-car-shop en GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z"/>
-            </svg>
-            <span>GitHub</span>
-          </a>
-        </div>
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <section id="formacion" class="section">
-
-    <h2 class="section-title reveal">Formación</h2>
-
-    <div class="timeline">
-
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Prácticas profesionales · Fundación General ULL</h3>
-          <p>Automatización del flujo de gestión de facturas del proyecto Canarias Convive. Backend con Google Apps Script, frontend con Next.js, validaciones automáticas y trazabilidad.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>DAM · Desarrollo de Aplicaciones Multiplataforma</h3>
-          <p> Aprendizaje en programación orientada a objetos, desarrollo backend, bases de datos y arquitectura de aplicaciones.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Nociones en Backend</h3>
-          <p>Aprendizaje de fundamentos de programación en Java, lógica de aplicaciones, estructuras de datos y primeros pasos en backend.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Fundamentos de Frontend</h3>
-          <p>Creación de interfaces web con HTML, CSS y JavaScript, explorando diseño responsive y comportamiento interactivo en el navegador.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- SKILL CHART: pegar dentro de #formacion -->
-    <div class="skill-chart-wrap" id="skillChartWrap" aria-label="Gráfico de habilidades">
-      <div class="skill-chart-panel">
-        <h3 class="skill-chart-title">Skills</h3>
-        <div class="skill-chart-stage"><!-- SVG se genera por JS aquí --></div>
-        <ul class="skill-list" aria-hidden="true"></ul>
       </div>
     </div>
   </section>
 
-  <section id="contacto" class="section dark contact contact-section">
 
-    <div class="contact-container">
+  <!-- ================= FORMACIÓN ================= -->
+  <section id="formacion">
+    <div class="container">
+      <h2 class="section-title reveal">Formación</h2>
 
-      <div class="contact-left">
+      <div class="timeline">
 
-        <p class="contact-label">CONTACTO</p>
-
-        <h2 class="contact-title">Contáctame</h2>
-
-        <div class="contact-cards">
-
-          <a href="mailto:diegogildam@gmail.com" class="contact-card"
-            aria-label="Enviar email a diegogildam@gmail.com">
-            <span class="icon" aria-hidden="true">✉</span>
-            <div>
-              <p class="contact-card-title">Email</p>
-              <p>diegogildam@gmail.com</p>
-            </div>
-          </a>
-
-          <a href="https://github.com/diegoalegil" target="_blank" rel="noopener" class="contact-card"
-            aria-label="Abrir el perfil de GitHub de Diego Gil en una nueva pestaña">
-            <span class="icon" aria-hidden="true">💻</span>
-            <div>
-              <p class="contact-card-title">GitHub</p>
-              <p>github.com/diegoalegil</p>
-            </div>
-          </a>
-
-          <div class="contact-card">
-            <span class="icon" aria-hidden="true">📱</span>
-            <div>
-              <p class="contact-card-title">Teléfono</p>
-              <p>+34 666 329 790</p>
-            </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <h3>Prácticas profesionales · Fundación General ULL</h3>
+            <p>Automatización del flujo de gestión de facturas del proyecto Canarias Convive. Backend con
+              Google Apps Script, frontend con Next.js, validaciones automáticas y trazabilidad.</p>
           </div>
+        </div>
 
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <h3>DAM · Desarrollo de Aplicaciones Multiplataforma</h3>
+            <p>Aprendizaje en programación orientada a objetos, desarrollo backend, bases de datos y
+              arquitectura de aplicaciones.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <h3>Nociones en Backend</h3>
+            <p>Fundamentos de programación en Java, lógica de aplicaciones, estructuras de datos y primeros
+              pasos en backend.</p>
+          </div>
         </div>
 
       </div>
+    </div>
+  </section>
 
 
-      <div class="contact-right">
+  <!-- ================= CONTACTO ================= -->
+  <section id="contacto">
+    <div class="container">
 
-        <p class="contact-quote">
-          Abierto a colaborar en proyectos que busquen evolucionar,
-          optimizar procesos y construir soluciones sólidas a largo plazo.
-        </p>
+      <div class="contact-grid">
 
-        <p class="contact-desc">
-          Estudiante de Desarrollo de Aplicaciones Multiplataforma en Tenerife.
-          Interesado en backend, arquitectura de software y mejora continua
-          de sistemas que realmente aporten valor.
-        </p>
+        <div class="reveal">
+          <p class="contact-label">Contacto</p>
+          <h2 class="contact-title">Contáctame</h2>
+
+          <div class="contact-cards">
+
+            <a href="mailto:diegogildam@gmail.com" class="contact-card"
+              aria-label="Enviar email a diegogildam@gmail.com">
+              <span class="icon" aria-hidden="true">✉</span>
+              <div>
+                <p class="contact-card-title">Email</p>
+                <p>diegogildam@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="https://github.com/diegoalegil" target="_blank" rel="noopener" class="contact-card"
+              aria-label="Abrir el perfil de GitHub de Diego Gil en una nueva pestaña">
+              <span class="icon" aria-hidden="true">💻</span>
+              <div>
+                <p class="contact-card-title">GitHub</p>
+                <p>github.com/diegoalegil</p>
+              </div>
+            </a>
+
+            <div class="contact-card">
+              <span class="icon" aria-hidden="true">📱</span>
+              <div>
+                <p class="contact-card-title">Teléfono</p>
+                <p>+34 666 329 790</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="contact-text reveal">
+          <p class="contact-quote">
+            Abierto a colaborar en proyectos que busquen evolucionar, optimizar procesos y construir
+            soluciones sólidas a largo plazo.
+          </p>
+          <p class="contact-desc">
+            Estudiante de Desarrollo de Aplicaciones Multiplataforma en Tenerife. Interesado en backend,
+            arquitectura de software y mejora continua de sistemas que aporten valor.
+          </p>
+        </div>
 
       </div>
 
     </div>
-
-
-    <!-- FOOTER AHORA DENTRO DE LA SECCIÓN -->
-
-    <footer class="footer">
-
-      <div class="footer-content">
-
-        <p class="footer-name">© 2026 Diego Gil</p>
-
-        <div class="footer-links">
-          <a href="https://github.com/diegoalegil" target="_blank" rel="noopener"
-            aria-label="Perfil de GitHub de Diego Gil">GitHub</a>
-          <span class="footer-sep">·</span>
-          <span>DAM</span>
-          <span class="footer-sep">·</span>
-          <span>Canarias</span>
-        </div>
-
-      </div>
-
-    </footer>
-
   </section>
 
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer-name">© 2026 Diego Gil</p>
+      <div class="site-footer-links">
+        <a href="https://github.com/diegoalegil" target="_blank" rel="noopener"
+          aria-label="Perfil de GitHub de Diego Gil">GitHub</a>
+        <span class="site-footer-sep">·</span>
+        <span>DAM</span>
+        <span class="site-footer-sep">·</span>
+        <span>Canarias</span>
+      </div>
+    </div>
+  </footer>
 
   <script src="assets/js/main.js"></script>
 
