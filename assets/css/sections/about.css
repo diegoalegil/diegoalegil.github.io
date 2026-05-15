@@ -1964,8 +1964,6 @@ html {
   width: 580px;
   max-width: 100%;
 
-  transform: scale(.95);
-
   background: linear-gradient(180deg, #0b0320, #12052a);
 
   border-radius: 14px;
@@ -1980,8 +1978,6 @@ html {
   overflow: hidden;
 
   font-family: monospace;
-
-  max-height: 750px;
 
   transition: all .8s cubic-bezier(.2, .8, .2, 1);
   transform: rotateY(-6deg) rotateX(2deg) scale(.95);
