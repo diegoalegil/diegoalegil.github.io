@@ -182,11 +182,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // SKILL LINE CHART - crea SVG animado dentro de .skill-chart-stage
 (function () {
   const skills = [
-    { name: 'DAM (1º año)', value: 45 },
-    { name: 'Motivación', value: 100 },
-    { name: 'Java / Backend básico', value: 40 },
-    { name: 'HTML · CSS · JS', value: 35 },
-    { name: 'Bases de datos (SQL)', value: 40 }
+    { name: 'Backend', value: 70 },
+    { name: 'BBDD', value: 75 },
+    { name: 'Distribuidos', value: 55 },
+    { name: 'Web', value: 60 },
+    { name: 'Motivación', value: 100 }
   ];
 
   // crea el SVG y lo inserta en containerSelector
@@ -294,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
       svg.appendChild(pct);
 
       const key = document.createElementNS(svgNS, 'text');
-      key.setAttribute('x', p.x - 18);
+      key.setAttribute('x', p.x);
       key.setAttribute('y', h - 6);
       key.setAttribute('class', 'key-label');
       key.textContent = p.s.name;
