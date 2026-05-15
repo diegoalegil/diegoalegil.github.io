@@ -702,21 +702,11 @@ section {
 
 /* Variantes de fondo por proyecto */
 .project-media--canarias  { background: linear-gradient(135deg, #0c2461, #1e3799 60%, #4a69bd); }
-.project-media--anime     { background: linear-gradient(135deg, #0a0014, #1a0033 50%, #0a0014); }
+.project-media--anime     { background: linear-gradient(135deg, #1a0008, #c8002a 55%, #2a0010); }
 .project-media--tinerpay  { background: linear-gradient(135deg, #2c0e4f, #6933ff 60%, #ff00cc); }
 .project-media--postgres  { background: linear-gradient(135deg, #1e3a5f, #336791 60%, #5fa5d5); }
 .project-media--garage    { background: linear-gradient(135deg, #4a1d00, #ff7a18 60%, #ffb14a); }
 .project-media--miniature { background: linear-gradient(135deg, #4d0a0a, #c0392b 60%, #f1c40f); }
-
-/* AnimeShowdown: poster vertical 2:3 dentro de un contenedor 4:3.
-   Con cover y object-position hacia arriba mostramos la cara + título
-   "HIMENO" llenando todo el media, sin bandas vacías. */
-.project-media--anime img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 22%;
-}
 
 .project-body {
   padding: 22px 24px 16px;
