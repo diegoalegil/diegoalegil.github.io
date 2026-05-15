@@ -7,14 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (hamburger && navLinks) {
     hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("open");
-      navLinks.classList.toggle("nav-open");
+      const isOpen = hamburger.classList.toggle("open");
+      navLinks.classList.toggle("nav-open", isOpen);
+      hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
 
     navLinks.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         hamburger.classList.remove("open");
         navLinks.classList.remove("nav-open");
+        hamburger.setAttribute("aria-expanded", "false");
       });
     });
   }

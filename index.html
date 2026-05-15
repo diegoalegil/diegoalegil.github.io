@@ -57,10 +57,11 @@
           <li><a href="#formacion">Formación</a></li>
           <li><a href="#contacto" class="btn-contacto">Contactar</a></li>
         </ul>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación"
+          aria-expanded="false" aria-controls="navLinks">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </button>
       </div>
     </nav>
@@ -68,7 +69,9 @@
     <div class="hero-layout">
 
       <div class="hero-photo">
-        <img src="assets/img/diego.jpeg" alt="Diego Gil" loading="lazy" width="360" height="360">
+        <img src="assets/img/diego.jpeg"
+          alt="Retrato de Diego Gil, desarrollador backend en prácticas en la Fundación General de la ULL"
+          width="360" height="360" fetchpriority="high" decoding="async">
 
       </div>
 
@@ -531,16 +534,18 @@
 
         <div class="contact-cards">
 
-          <a href="mailto:diegogildam@gmail.com" class="contact-card">
-            <span class="icon">✉</span>
+          <a href="mailto:diegogildam@gmail.com" class="contact-card"
+            aria-label="Enviar email a diegogildam@gmail.com">
+            <span class="icon" aria-hidden="true">✉</span>
             <div>
               <p class="contact-card-title">Email</p>
               <p>diegogildam@gmail.com</p>
             </div>
           </a>
 
-          <a href="https://github.com/diegoalegil" target="_blank" class="contact-card">
-            <span class="icon">💻</span>
+          <a href="https://github.com/diegoalegil" target="_blank" rel="noopener" class="contact-card"
+            aria-label="Abrir el perfil de GitHub de Diego Gil en una nueva pestaña">
+            <span class="icon" aria-hidden="true">💻</span>
             <div>
               <p class="contact-card-title">GitHub</p>
               <p>github.com/diegoalegil</p>
@@ -548,7 +553,7 @@
           </a>
 
           <div class="contact-card">
-            <span class="icon">📱</span>
+            <span class="icon" aria-hidden="true">📱</span>
             <div>
               <p class="contact-card-title">Teléfono</p>
               <p>+34 666 329 790</p>
@@ -587,7 +592,8 @@
         <p class="footer-name">© 2026 Diego Gil</p>
 
         <div class="footer-links">
-          <a href="https://github.com/diegoalegil" target="_blank">GitHub</a>
+          <a href="https://github.com/diegoalegil" target="_blank" rel="noopener"
+            aria-label="Perfil de GitHub de Diego Gil">GitHub</a>
           <span class="footer-sep">·</span>
           <span>DAM</span>
           <span class="footer-sep">·</span>
