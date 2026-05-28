@@ -13,25 +13,48 @@
     const navLinks = document.getElementById('navLinks');
 
     if (hamburger && navLinks) {
-      const close = () => {
-        hamburger.classList.remove('is-open');
-        navLinks.classList.remove('is-open');
-        hamburger.setAttribute('aria-expanded', 'false');
+      const links = Array.from(navLinks.querySelectorAll('a'));
+
+      const setOpen = (open) => {
+        hamburger.classList.toggle('is-open', open);
+        navLinks.classList.toggle('is-open', open);
+        hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.style.overflow = open ? 'hidden' : '';
+      };
+
+      const open = () => {
+        setOpen(true);
+        if (links[0]) links[0].focus();
+      };
+
+      const close = (returnFocus) => {
+        setOpen(false);
+        if (returnFocus) hamburger.focus();
       };
 
       hamburger.addEventListener('click', () => {
-        const isOpen = hamburger.classList.toggle('is-open');
-        navLinks.classList.toggle('is-open', isOpen);
-        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (hamburger.classList.contains('is-open')) close(true);
+        else open();
       });
 
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', close);
-      });
+      links.forEach(link => link.addEventListener('click', () => close(false)));
 
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navLinks.classList.contains('is-open')) {
-          close();
+        if (!navLinks.classList.contains('is-open')) return;
+
+        if (e.key === 'Escape') {
+          close(true);
+        } else if (e.key === 'Tab' && links.length) {
+          // Focus trap: ciclar entre el primer y el último enlace del menú
+          const first = links[0];
+          const last = links[links.length - 1];
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
         }
       });
     }

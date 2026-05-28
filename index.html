@@ -20,8 +20,10 @@
   <meta property="og:title" content="Diego Gil — Backend · Bases de datos · DAM">
   <meta property="og:description"
     content="Portfolio de Diego Gil: backend, bases de datos y arquitectura. Java, Spring Boot, PostgreSQL, Node.js. Prácticas en la Fundación General de la ULL.">
-  <meta property="og:image" content="https://diegoalegil.github.io/assets/img/diego.jpeg">
-  <meta property="og:image:alt" content="Foto de perfil de Diego Gil">
+  <meta property="og:image" content="https://diegoalegil.github.io/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Diego Gil — Backend · Bases de datos · Arquitectura">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Diego Gil">
 
@@ -29,22 +31,43 @@
   <meta name="twitter:title" content="Diego Gil — Backend · Bases de datos · DAM">
   <meta name="twitter:description"
     content="Portfolio de Diego Gil: backend, bases de datos y arquitectura. Java, Spring Boot, PostgreSQL, Node.js. Prácticas en la Fundación General de la ULL.">
-  <meta name="twitter:image" content="https://diegoalegil.github.io/assets/img/diego.jpeg">
+  <meta name="twitter:image" content="https://diegoalegil.github.io/assets/img/og.jpg">
 
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
-  <link rel="preload" as="image" href="assets/img/hero-sky.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/hero-sky-1280.webp" type="image/webp" media="(max-width: 720px)">
+  <link rel="preload" as="image" href="assets/img/hero-sky-1920.webp" type="image/webp" media="(min-width: 721px)">
   <link rel="preload" as="image" href="assets/img/diego.jpeg" fetchpriority="high">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/orbitron-700-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-latin.woff2" crossorigin>
 
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/main.css">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Diego Gil",
+    "url": "https://diegoalegil.github.io/",
+    "image": "https://diegoalegil.github.io/assets/img/diego.jpeg",
+    "jobTitle": "Desarrollador Backend",
+    "knowsLanguage": ["es", "en"],
+    "knowsAbout": ["Java", "Spring Boot", "PostgreSQL", "Node.js", "Bases de datos", "Arquitectura de software"],
+    "address": { "@type": "PostalAddress", "addressRegion": "Canarias", "addressCountry": "ES" },
+    "sameAs": ["https://github.com/diegoalegil"]
+  }
+  </script>
 </head>
 
 <body>
@@ -113,10 +136,10 @@
           </p>
 
           <div class="atributos">
-            <div><span>🎓</span> DAM Tenerife</div>
-            <div><span>🌍</span> C1 Inglés</div>
-            <div><span>🚗</span> Carnet B</div>
-            <div><span>💼</span> Prácticas ULL</div>
+            <div><span aria-hidden="true">🎓</span> DAM Tenerife</div>
+            <div><span aria-hidden="true">🌍</span> C1 Inglés</div>
+            <div><span aria-hidden="true">🚗</span> Carnet B</div>
+            <div><span aria-hidden="true">💼</span> Prácticas ULL</div>
           </div>
         </div>
 
@@ -172,30 +195,30 @@
         <div class="tech-grid">
 
           <article class="tech-card tech-card--java">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="tech-icon"
+            <img src="assets/img/tech/java/java-original.svg" class="tech-icon"
               alt="Logo de Java" loading="lazy" decoding="async">
-            <h3>Java</h3>
+            <h4>Java</h4>
             <p>POO, APIs REST</p>
           </article>
 
           <article class="tech-card tech-card--spring">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" class="tech-icon"
+            <img src="assets/img/tech/spring/spring-original.svg" class="tech-icon"
               alt="Logo de Spring Boot" loading="lazy" decoding="async">
-            <h3>Spring Boot</h3>
+            <h4>Spring Boot</h4>
             <p>JWT, JPA, microservicios</p>
           </article>
 
           <article class="tech-card tech-card--node">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="tech-icon"
+            <img src="assets/img/tech/nodejs/nodejs-original.svg" class="tech-icon"
               alt="Logo de Node.js" loading="lazy" decoding="async">
-            <h3>Node.js</h3>
+            <h4>Node.js</h4>
             <p>Servicios distribuidos</p>
           </article>
 
           <article class="tech-card tech-card--php">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="tech-icon"
+            <img src="assets/img/tech/php/php-original.svg" class="tech-icon"
               alt="Logo de PHP" loading="lazy" decoding="async">
-            <h3>PHP</h3>
+            <h4>PHP</h4>
             <p>WordPress y APIs</p>
           </article>
 
@@ -207,9 +230,9 @@
         <div class="tech-grid">
 
           <article class="tech-card tech-card--postgres">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+            <img src="assets/img/tech/postgresql/postgresql-original.svg"
               class="tech-icon" alt="Logo de PostgreSQL" loading="lazy" decoding="async">
-            <h3>PostgreSQL</h3>
+            <h4>PostgreSQL</h4>
             <p>PL/pgSQL, triggers, ACID</p>
           </article>
 
@@ -221,21 +244,21 @@
               <text x="12" y="15.3" text-anchor="middle" font-family="Orbitron, sans-serif"
                 font-size="9" font-weight="700" fill="#ffffff">C</text>
             </svg>
-            <h3>CockroachDB</h3>
+            <h4>CockroachDB</h4>
             <p>SQL distribuido</p>
           </article>
 
           <article class="tech-card tech-card--mysql">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="tech-icon"
+            <img src="assets/img/tech/mysql/mysql-original.svg" class="tech-icon"
               alt="Logo de MySQL" loading="lazy" decoding="async">
-            <h3>MySQL</h3>
+            <h4>MySQL</h4>
             <p>Consultas relacionales</p>
           </article>
 
           <article class="tech-card tech-card--sqlite">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" class="tech-icon"
+            <img src="assets/img/tech/sqlite/sqlite-original.svg" class="tech-icon"
               alt="Logo de SQLite" loading="lazy" decoding="async">
-            <h3>SQLite</h3>
+            <h4>SQLite</h4>
             <p>Persistencia embebida</p>
           </article>
 
@@ -247,30 +270,30 @@
         <div class="tech-grid">
 
           <article class="tech-card tech-card--js">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            <img src="assets/img/tech/javascript/javascript-original.svg"
               class="tech-icon" alt="Logo de JavaScript" loading="lazy" decoding="async">
-            <h3>JavaScript</h3>
+            <h4>JavaScript</h4>
             <p>Lógica e interactividad</p>
           </article>
 
           <article class="tech-card tech-card--html">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="tech-icon"
+            <img src="assets/img/tech/html5/html5-original.svg" class="tech-icon"
               alt="Logo de HTML5" loading="lazy" decoding="async">
-            <h3>HTML</h3>
+            <h4>HTML</h4>
             <p>Estructura semántica</p>
           </article>
 
           <article class="tech-card tech-card--css">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="tech-icon"
+            <img src="assets/img/tech/css3/css3-original.svg" class="tech-icon"
               alt="Logo de CSS3" loading="lazy" decoding="async">
-            <h3>CSS</h3>
+            <h4>CSS</h4>
             <p>Animaciones y responsive</p>
           </article>
 
           <article class="tech-card tech-card--wp">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
+            <img src="assets/img/tech/wordpress/wordpress-original.svg"
               class="tech-icon" alt="Logo de WordPress" loading="lazy" decoding="async">
-            <h3>WordPress</h3>
+            <h4>WordPress</h4>
             <p>Temas y WooCommerce</p>
           </article>
 
@@ -520,13 +543,13 @@
               </div>
             </a>
 
-            <div class="contact-card">
+            <a href="tel:+34666329790" class="contact-card" aria-label="Llamar al +34 666 329 790">
               <span class="icon" aria-hidden="true">📱</span>
               <div>
                 <p class="contact-card-title">Teléfono</p>
                 <p>+34 666 329 790</p>
               </div>
-            </div>
+            </a>
 
           </div>
         </div>

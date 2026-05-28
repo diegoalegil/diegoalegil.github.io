@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Página no encontrada · Diego Gil</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#070014">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      text-align: center;
+      padding: 24px;
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      color: #f2edff;
+      background: #070014;
+      background-image:
+        radial-gradient(ellipse 80% 60% at 15% 10%, rgba(106, 0, 255, 0.22), transparent 55%),
+        radial-gradient(ellipse 70% 60% at 85% 90%, rgba(255, 0, 200, 0.14), transparent 55%),
+        linear-gradient(180deg, #070014, #0d0020);
+    }
+
+    .code {
+      font-size: clamp(80px, 22vw, 180px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #00f7ff, #6a00ff, #ff00cc);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h1 { font-size: clamp(20px, 4vw, 28px); font-weight: 600; }
+
+    p { color: #c8b6ff; max-width: 38ch; line-height: 1.6; }
+
+    a.home {
+      margin-top: 8px;
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-weight: 600;
+      color: #1a0033;
+      text-decoration: none;
+      background: linear-gradient(135deg, #ff00cc, #ffc857);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    a.home:hover { transform: translateY(-2px); box-shadow: 0 0 22px rgba(255, 200, 87, 0.5); }
+
+    a.home:focus-visible { outline: 2px solid #00f7ff; outline-offset: 3px; }
+  </style>
+</head>
+
+<body>
+  <div class="code">404</div>
+  <h1>Página no encontrada</h1>
+  <p>La página que buscas no existe o se ha movido.</p>
+  <a class="home" href="/">Volver al inicio</a>
+</body>
+
+</html>

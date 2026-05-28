@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+Icon
+Icon?
+._*
+
+# Editores / IDE
+.vscode/
+.idea/
+*.swp
+
+
+# Logs / temporales
+*.log
+node_modules/
