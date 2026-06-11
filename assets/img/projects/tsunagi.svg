@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <!-- tres fuentes convergiendo -->
+  <path d="M40 36C76 36 92 62 112 68M34 75h60M40 114c36 0 52-26 72-32" stroke="rgba(246,249,255,.6)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 9"/>
+  <circle cx="28" cy="36" r="11" fill="rgba(8,0,28,.45)" stroke="#5ff2ff" stroke-width="4"/>
+  <circle cx="22" cy="75" r="11" fill="rgba(8,0,28,.45)" stroke="#ffd166" stroke-width="4"/>
+  <circle cx="28" cy="114" r="11" fill="rgba(8,0,28,.45)" stroke="#ff5fd8" stroke-width="4"/>
+  <!-- núcleo hexagonal del SDK -->
+  <path d="M138 33 174 54v42l-36 21-36-21V54Z" fill="rgba(8,0,28,.45)" stroke="#f6f9ff" stroke-width="4.5" stroke-linejoin="round"/>
+  <!-- nudo de unión -->
+  <circle cx="138" cy="75" r="13" stroke="#5ff2ff" stroke-width="4"/>
+  <path d="M138 47v15M114 89l13-7m24 7-13-7" stroke="#f6f9ff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="138" cy="75" r="4" fill="#ffd166"/>
+</svg>

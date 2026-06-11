@@ -747,8 +747,9 @@ section {
 }
 
 .project-media-icon {
-  font-size: 80px;
-  line-height: 1;
+  width: 62%;
+  max-width: 210px;
+  height: auto;
   filter:
     drop-shadow(0 0 18px rgba(0, 247, 255, 0.45))
     drop-shadow(0 0 35px rgba(255, 0, 200, 0.2));
@@ -760,12 +761,12 @@ section {
 }
 
 /* Variantes de fondo por proyecto */
-.project-media--canarias  { background: linear-gradient(135deg, #0c2461, #1e3799 60%, #4a69bd); }
-.project-media--anime     { background: linear-gradient(135deg, #1a0008, #c8002a 55%, #2a0010); }
-.project-media--tinerpay  { background: linear-gradient(135deg, #2c0e4f, #6933ff 60%, #ff00cc); }
-.project-media--postgres  { background: linear-gradient(135deg, #1e3a5f, #336791 60%, #5fa5d5); }
-.project-media--garage    { background: linear-gradient(135deg, #4a1d00, #ff7a18 60%, #ffb14a); }
-.project-media--miniature { background: linear-gradient(135deg, #4d0a0a, #c0392b 60%, #f1c40f); }
+.project-media--canarias { background: linear-gradient(135deg, #0c2461, #1e3799 60%, #4a69bd); }
+.project-media--anime    { background: linear-gradient(135deg, #1a0008, #c8002a 55%, #2a0010); }
+.project-media--tinerpay { background: linear-gradient(135deg, #2c0e4f, #6933ff 60%, #ff00cc); }
+.project-media--tsunagi  { background: linear-gradient(135deg, #001a2c, #006d77 60%, #2ab7ca); }
+.project-media--matcher  { background: linear-gradient(135deg, #1e3a5f, #336791 60%, #5fa5d5); }
+.project-media--diesel   { background: linear-gradient(135deg, #02240f, #157a3c 60%, #58c322); }
 
 .project-body {
   padding: 22px 24px 16px;

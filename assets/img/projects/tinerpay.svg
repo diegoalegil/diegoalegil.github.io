@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <!-- malla de nodos distribuidos -->
+  <path d="M62 30 100 18l38 12M62 30h76M62 30l18 26m58-26-18 26m-38-38v38" stroke="rgba(246,249,255,.55)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="62" cy="30" r="8" fill="#5ff2ff"/>
+  <circle cx="100" cy="18" r="8" fill="#ffd166"/>
+  <circle cx="138" cy="30" r="8" fill="#ff5fd8"/>
+  <!-- tarjeta -->
+  <rect x="40" y="56" width="120" height="74" rx="11" fill="rgba(8,0,28,.45)" stroke="#f6f9ff" stroke-width="4"/>
+  <rect x="54" y="72" width="24" height="17" rx="4" fill="rgba(255,209,102,.25)" stroke="#ffd166" stroke-width="3.5"/>
+  <!-- contactless -->
+  <path d="M138 72a14 14 0 0 1 0 18M146 66a22 22 0 0 1 0 30" stroke="#5ff2ff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M54 106h44M54 116h28" stroke="#f6f9ff" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <!-- título A -->
+  <rect x="14" y="24" width="74" height="46" rx="8" fill="rgba(8,0,28,.42)" stroke="#f6f9ff" stroke-width="4"/>
+  <path d="M26 40h50M26 54h32" stroke="#5ff2ff" stroke-width="4" stroke-linecap="round"/>
+  <!-- título B -->
+  <rect x="112" y="80" width="74" height="46" rx="8" fill="rgba(8,0,28,.42)" stroke="#f6f9ff" stroke-width="4"/>
+  <path d="M124 96h50M124 110h32" stroke="#ff5fd8" stroke-width="4" stroke-linecap="round"/>
+  <!-- enlace difuso -->
+  <path d="M88 47c40 0 -16 56 24 56" stroke="#ffd166" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 10"/>
+  <!-- badge de score (%) -->
+  <circle cx="100" cy="75" r="17" fill="rgba(8,0,28,.55)" stroke="#ffd166" stroke-width="4"/>
+  <path d="m93 83 14-16" stroke="#f6f9ff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="93.5" cy="69" r="3.5" fill="#5ff2ff"/>
+  <circle cx="106.5" cy="81" r="3.5" fill="#ff5fd8"/>
+</svg>

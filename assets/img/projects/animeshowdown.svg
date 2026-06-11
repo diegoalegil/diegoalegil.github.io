@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <!-- sol naciente -->
+  <circle cx="100" cy="86" r="34" fill="rgba(255,209,102,.16)" stroke="#ffd166" stroke-width="4"/>
+  <!-- ranking entre pilares -->
+  <rect x="72" y="106" width="13" height="22" rx="3" fill="#5ff2ff"/>
+  <rect x="93" y="94" width="13" height="34" rx="3" fill="#ff5fd8"/>
+  <rect x="114" y="82" width="13" height="46" rx="3" fill="#ffd166"/>
+  <!-- torii -->
+  <path d="M28 40q72-18 144 0" stroke="#f6f9ff" stroke-width="7" stroke-linecap="round"/>
+  <path d="M42 62h116" stroke="#f6f9ff" stroke-width="6" stroke-linecap="round"/>
+  <path d="M100 42v20" stroke="#f6f9ff" stroke-width="6" stroke-linecap="round"/>
+  <path d="M59 36 52 128M141 36l7 92" stroke="#f6f9ff" stroke-width="7" stroke-linecap="round"/>
+  <!-- destellos -->
+  <path d="M36 92l4 8 8 4-8 4-4 8-4-8-8-4 8-4Z" fill="#5ff2ff"/>
+  <path d="M168 78l3 6 6 3-6 3-3 6-3-6-6-3 6-3Z" fill="#ff5fd8"/>
+</svg>

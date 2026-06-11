@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <!-- surtidor -->
+  <rect x="38" y="34" width="72" height="96" rx="10" fill="rgba(8,0,28,.42)" stroke="#f6f9ff" stroke-width="4.5"/>
+  <rect x="52" y="48" width="44" height="26" rx="5" fill="rgba(95,242,255,.12)" stroke="#5ff2ff" stroke-width="4"/>
+  <path d="M58 88h32M58 100h20" stroke="#f6f9ff" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+  <path d="M28 130h92" stroke="#f6f9ff" stroke-width="5" stroke-linecap="round"/>
+  <!-- manguera -->
+  <path d="M110 58h16a10 10 0 0 1 10 10v36" stroke="#f6f9ff" stroke-width="5" stroke-linecap="round"/>
+  <rect x="129" y="104" width="14" height="18" rx="4" fill="#ff5fd8"/>
+  <!-- euro -->
+  <circle cx="166" cy="44" r="19" fill="rgba(8,0,28,.5)" stroke="#ffd166" stroke-width="4"/>
+  <path d="M174 36a10.5 10.5 0 1 0 0 16" stroke="#ffd166" stroke-width="4" stroke-linecap="round"/>
+  <path d="M157 41h11M157 48h11" stroke="#ffd166" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- precio a la baja -->
+  <path d="M166 74v34m0 0-9-10m9 10 9-10" stroke="#5ff2ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
