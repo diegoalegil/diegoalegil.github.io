@@ -13,3 +13,6 @@ Icon?
 # Logs / temporales
 *.log
 node_modules/
+
+# Artefactos de verificación visual
+shots/

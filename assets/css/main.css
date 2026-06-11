@@ -1138,13 +1138,19 @@ section {
     justify-content: flex-end;
   }
 
+  /* display: contents — la pill deja de generar caja (fuera estilos y
+     backdrop-filter, que crearía containing block para el overlay fixed),
+     pero sus hijos siguen renderizando. Con display:none el menú nunca
+     podría abrirse. */
   .nav-pill {
-    display: none;
+    display: contents;
   }
 
   .hamburger {
     display: flex;
     pointer-events: auto;
+    position: relative;
+    z-index: 100; /* por encima del overlay para poder cerrarlo */
   }
 
   .nav-links {
@@ -1152,6 +1158,7 @@ section {
     position: fixed;
     inset: 0;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     background: rgba(7, 0, 20, 0.97);
     backdrop-filter: blur(20px);
@@ -1168,6 +1175,10 @@ section {
   .nav-links a {
     font-size: 22px;
     padding: 8px 0;
+  }
+
+  .nav-links .btn-contacto {
+    padding: 10px 28px;
   }
 
   .hamburger.is-open span:nth-child(1) {
