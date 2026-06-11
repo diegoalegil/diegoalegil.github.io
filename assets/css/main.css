@@ -359,8 +359,12 @@ section {
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
-  max-width: 560px;
+  max-width: 740px;
   animation: fadeUp 1.2s 0.4s both cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-tagline .tag-item {
+  white-space: nowrap;
 }
 
 @keyframes fadeUp {
@@ -374,12 +378,17 @@ section {
   }
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .hero-sub {
   font-family: var(--font-display);
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 4px;
   text-transform: uppercase;
+  text-wrap: balance;
   margin-bottom: 10px;
   background: linear-gradient(90deg, var(--cyan), #6fd3ff);
   -webkit-background-clip: text;
@@ -389,9 +398,9 @@ section {
 
 .hero-tagline {
   font-family: var(--font-display);
-  font-size: clamp(20px, 2.6vw, 34px);
+  font-size: clamp(20px, 2.2vw, 30px);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.25;
   background: linear-gradient(90deg, var(--yellow), #ff9e00, var(--pink));
   background-size: 200% 100%;
   -webkit-background-clip: text;
@@ -717,18 +726,16 @@ section {
   line-height: 1.55;
   color: var(--text-soft);
   margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .project-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 4px;
+  /* ancla los chips abajo: en cada fila quedan a la misma altura
+     aunque las descripciones midan distinto */
+  margin-top: auto;
+  padding-top: 4px;
 }
 
 .project-badge {
@@ -930,9 +937,15 @@ section {
 }
 
 .contact-card .icon {
-  font-size: 22px;
+  display: inline-flex;
   color: var(--cyan);
   transition: transform var(--t-base);
+}
+
+.contact-card .icon svg {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 0 6px rgba(0, 247, 255, 0.4));
 }
 
 .contact-card:hover .icon {
@@ -1079,8 +1092,20 @@ section {
     height: 260px;
   }
 
+  /* Apilado sin separadores: con menos ancho los "·" partían la frase
+     en sitios feos */
+  .hero-tagline .tag-sep {
+    display: none;
+  }
+
+  .hero-tagline .tag-item {
+    display: block;
+  }
+
+  /* 2 columnas: cada categoría tiene 4 tarjetas y con 3 columnas
+     siempre quedaba una huérfana */
   .tech-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .projects-grid {
