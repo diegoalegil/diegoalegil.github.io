@@ -515,8 +515,14 @@ section {
 }
 
 .atributos > div span {
-  font-size: 20px;
-  line-height: 1;
+  display: inline-flex;
+  color: var(--cyan);
+}
+
+.atributos > div span svg {
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 0 5px rgba(0, 247, 255, 0.4));
 }
 
 .atributos > div:hover {

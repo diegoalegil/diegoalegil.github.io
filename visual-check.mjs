@@ -46,9 +46,14 @@ async function autoScroll(page) {
       const bottom = window.scrollY + window.innerHeight;
       if (bottom >= document.documentElement.scrollHeight - 1) {
         clearInterval(id);
-        window.scrollTo(0, 0);
-        document.documentElement.style.scrollBehavior = prev;
-        resolve();
+        // Quédate abajo un momento antes de soltar: el IntersectionObserver
+        // entrega los records del último .reveal en el frame siguiente. Si
+        // saltáramos arriba de inmediato (scrollTo(0,0)) perdería la carrera
+        // y la última sección quedaría a opacity:0 en la captura full-page.
+        setTimeout(() => {
+          document.documentElement.style.scrollBehavior = prev;
+          resolve();
+        }, 700);
       }
     }, 80);
   }));

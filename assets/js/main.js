@@ -19,6 +19,7 @@
         hamburger.classList.toggle('is-open', open);
         navLinks.classList.toggle('is-open', open);
         hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        hamburger.setAttribute('aria-label', open ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
         document.body.style.overflow = open ? 'hidden' : '';
       };
 
