@@ -1,16 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
-  <!-- sol naciente -->
-  <circle cx="100" cy="86" r="34" fill="rgba(255,209,102,.16)" stroke="#ffd166" stroke-width="4"/>
-  <!-- ranking entre pilares -->
-  <rect x="72" y="106" width="13" height="22" rx="3" fill="#5ff2ff"/>
-  <rect x="93" y="94" width="13" height="34" rx="3" fill="#ff5fd8"/>
-  <rect x="114" y="82" width="13" height="46" rx="3" fill="#ffd166"/>
-  <!-- torii -->
-  <path d="M28 40q72-18 144 0" stroke="#f6f9ff" stroke-width="7" stroke-linecap="round"/>
-  <path d="M42 62h116" stroke="#f6f9ff" stroke-width="6" stroke-linecap="round"/>
-  <path d="M100 42v20" stroke="#f6f9ff" stroke-width="6" stroke-linecap="round"/>
-  <path d="M59 36 52 128M141 36l7 92" stroke="#f6f9ff" stroke-width="7" stroke-linecap="round"/>
-  <!-- destellos -->
-  <path d="M36 92l4 8 8 4-8 4-4 8-4-8-8-4 8-4Z" fill="#5ff2ff"/>
-  <path d="M168 78l3 6 6 3-6 3-3 6-3-6-6-3 6-3Z" fill="#ff5fd8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="g" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#7a0aff"></stop>
+      <stop offset="1" stop-color="#ff00cc"></stop>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#070014" flood-opacity="0.55"></feDropShadow>
+    </filter>
+  </defs>
+  <g filter="url(#sh)" stroke="#eaf6ff" stroke-width="4">
+    <path d="M38 44h60"></path>
+    <path d="M52 58h32"></path>
+    <path d="M54 44v68M82 44v68"></path>
+  </g>
+  <path d="M106 116h78" stroke="#eaf6ff" stroke-width="4"></path>
+  <g filter="url(#sh)" stroke="#eaf6ff" stroke-width="2.5">
+    <rect x="110" y="92" width="16" height="24" rx="2" fill="url(#g)"></rect>
+    <rect x="134" y="76" width="16" height="40" rx="2" fill="url(#g)"></rect>
+    <rect x="158" y="56" width="16" height="60" rx="2" fill="url(#g)"></rect>
+  </g>
+  <path d="m166 36 4 9 9 1-7 7 2 9-8-5-8 5 2-9-7-7 9-1z" fill="#ffc857" stroke="#ffc857" stroke-width="2.5"></path>
 </svg>

@@ -39,11 +39,12 @@
   <link rel="manifest" href="site.webmanifest">
 
   <link rel="preload" as="image" href="assets/img/hero-sky-1280.webp" type="image/webp" media="(max-width: 720px)">
-  <link rel="preload" as="image" href="assets/img/hero-sky-1920.webp" type="image/webp" media="(min-width: 721px)">
+  <link rel="preload" as="image" href="assets/img/hero-sky-1920.webp" type="image/webp" media="(min-width: 721px) and (max-width: 1920px)">
+  <link rel="preload" as="image" href="assets/img/hero-sky-2560.webp" type="image/webp" media="(min-width: 1921px)">
   <link rel="preload" as="image" href="assets/img/diego.jpeg" fetchpriority="high">
 
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/orbitron-700-latin.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-500-latin.woff2" crossorigin>
 
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/main.css">
@@ -58,6 +59,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://diegoalegil.github.io/#diego",
     "name": "Diego Gil",
     "url": "https://diegoalegil.github.io/",
     "image": "https://diegoalegil.github.io/assets/img/diego.jpeg",
@@ -68,20 +70,115 @@
     "sameAs": ["https://github.com/diegoalegil"]
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://diegoalegil.github.io/#website",
+        "name": "Diego Gil",
+        "url": "https://diegoalegil.github.io/",
+        "inLanguage": "es-ES",
+        "author": { "@id": "https://diegoalegil.github.io/#diego" }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Proyectos de Diego Gil",
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@id": "https://diegoalegil.github.io/#canarias-convive" } },
+          { "@type": "ListItem", "position": 2, "item": { "@id": "https://github.com/diegoalegil/AnimeShowdown" } },
+          { "@type": "ListItem", "position": 3, "item": { "@id": "https://github.com/diegoalegil/TinerPay" } },
+          { "@type": "ListItem", "position": 4, "item": { "@id": "https://github.com/diegoalegil/tsunagi" } },
+          { "@type": "ListItem", "position": 5, "item": { "@id": "https://github.com/diegoalegil/anime-title-matcher" } },
+          { "@type": "ListItem", "position": 6, "item": { "@id": "https://github.com/diegoalegil/diesel-barato" } }
+        ]
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://diegoalegil.github.io/#canarias-convive",
+        "name": "Canarias Convive",
+        "description": "Automatización del flujo de gestión de facturas con validaciones en cascada y trazabilidad documento a documento.",
+        "author": { "@id": "https://diegoalegil.github.io/#diego" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://github.com/diegoalegil/AnimeShowdown",
+        "name": "AnimeShowdown",
+        "description": "Torneos y ranking ELO de personajes anime. Backend con autenticación JWT y persistencia en PostgreSQL.",
+        "codeRepository": "https://github.com/diegoalegil/AnimeShowdown",
+        "programmingLanguage": "Java",
+        "author": { "@id": "https://diegoalegil.github.io/#diego" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://github.com/diegoalegil/TinerPay",
+        "name": "TinerPay",
+        "description": "Sistema de pagos distribuido tolerante a fallos sobre una base de datos SQL global.",
+        "codeRepository": "https://github.com/diegoalegil/TinerPay",
+        "programmingLanguage": "JavaScript",
+        "author": { "@id": "https://diegoalegil.github.io/#diego" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://github.com/diegoalegil/tsunagi",
+        "name": "tsunagi",
+        "description": "SDK de datos de anime para Java: un único cliente unificado sobre AniList, TMDb y Jikan.",
+        "codeRepository": "https://github.com/diegoalegil/tsunagi",
+        "programmingLanguage": "Java",
+        "author": { "@id": "https://diegoalegil.github.io/#diego" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://github.com/diegoalegil/anime-title-matcher",
+        "name": "Anime Title Matcher",
+        "description": "Matcher difuso multi-señal entre AniList y TMDb con algoritmos de similitud propios y scoring explicable.",
+        "codeRepository": "https://github.com/diegoalegil/anime-title-matcher",
+        "programmingLanguage": "Java",
+        "author": { "@id": "https://diegoalegil.github.io/#diego" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://github.com/diegoalegil/diesel-barato",
+        "name": "Diésel Barato",
+        "description": "PWA con los precios oficiales del diésel en Tenerife: la gasolinera más barata, también offline.",
+        "codeRepository": "https://github.com/diegoalegil/diesel-barato",
+        "programmingLanguage": "JavaScript",
+        "author": { "@id": "https://diegoalegil.github.io/#diego" }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+
+  <a class="skip-link" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+
+  <!-- Sprite SVG: icono GitHub deduplicado (#17) -->
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path
+        d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
+    </symbol>
+  </svg>
 
   <!-- ================= NAV ================= -->
   <nav class="nav">
     <div class="nav-pill">
       <ul class="nav-links" id="navLinks">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#stack">Stack</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#formacion">Formación</a></li>
-        <li><a href="#contacto" class="btn-contacto">Contactar</a></li>
+        <li><a href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
+        <li><a href="#sobre-mi" data-i18n="nav_sobremi">Sobre mí</a></li>
+        <li><a href="#stack" data-i18n="nav_stack">Stack</a></li>
+        <li><a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a></li>
+        <li><a href="#formacion" data-i18n="nav_formacion">Formación</a></li>
+        <li class="nav-lang" role="group" aria-label="Idioma / Language">
+          <button type="button" class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </li>
+        <li><a href="#contacto" class="btn-contacto" data-i18n="nav_contactar">Contactar</a></li>
       </ul>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false"
@@ -94,6 +191,7 @@
 
 
   <!-- ================= HERO ================= -->
+  <main id="contenido" tabindex="-1">
   <header class="hero" id="inicio">
     <div class="container">
       <div class="hero-grid">
@@ -105,16 +203,37 @@
         </div>
 
         <div class="hero-text">
+          <p class="hero-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="hero_status">Disponible para prácticas / primer empleo backend</span>
+          </p>
           <h1 class="hero-name">
             <span>DIEGO</span>
             <span>GIL</span>
           </h1>
 
           <div class="hero-info">
-            <p class="hero-sub">Prácticas en Fundación General <span class="nowrap">ULL · DAM</span></p>
-            <p class="hero-tagline"><span class="tag-item">Backend</span><span class="tag-sep"> · </span><span
-                class="tag-item">Bases de datos</span><span class="tag-sep"> · </span><span
-                class="tag-item">Arquitectura</span></p>
+            <p class="hero-sub"><span data-i18n="hero_sub">Prácticas en Fundación General</span> <span class="nowrap">ULL · DAM</span></p>
+            <p class="hero-tagline"><span class="tag-item" data-i18n="tag_backend">Backend</span><span class="tag-sep"> · </span><span
+                class="tag-item" data-i18n="tag_db">Bases de datos</span><span class="tag-sep"> · </span><span
+                class="tag-item" data-i18n="tag_arch">Arquitectura</span></p>
+          </div>
+
+          <div class="hero-cta">
+            <a class="cta cta-primary" href="#contacto">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+                <path d="m3.5 6.5 8.5 6.5 8.5-6.5" />
+              </svg>
+              <span data-i18n="cta_contact">Contáctame</span>
+            </a>
+            <a class="cta cta-ghost" href="https://github.com/diegoalegil" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <use href="#icon-github"></use>
+              </svg>
+              <span data-i18n="cta_github">Ver GitHub</span>
+            </a>
           </div>
         </div>
 
@@ -128,17 +247,15 @@
   </header>
 
 
-  <main>
-
   <!-- ================= SOBRE MÍ ================= -->
   <section id="sobre-mi">
     <div class="container">
-      <h2 class="section-title reveal">Sobre mí</h2>
+      <h2 class="section-title reveal" data-i18n="title_about">Sobre mí</h2>
 
       <div class="about-grid">
 
         <div class="reveal">
-          <p class="about-text">
+          <p class="about-text" data-i18n-html="about_text">
             Estudiante de <strong>Desarrollo de Aplicaciones Multiplataforma</strong> en Tenerife.
             Me obsesiona entender cómo funcionan las cosas por dentro y construir
             soluciones que aporten valor real.
@@ -146,41 +263,41 @@
 
           <div class="atributos">
             <div>
-              <span aria-hidden="true">
+              <span class="attr-ico" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m3 9 9-4 9 4-9 4Z" />
                   <path d="M7 11.5V16c0 1 2.2 2 5 2s5-1 5-2v-4.5" />
                   <path d="M21 9v4" />
                 </svg>
-              </span> DAM Tenerife
+              </span> <span data-i18n="attr_dam">DAM Tenerife</span>
             </div>
             <div>
-              <span aria-hidden="true">
+              <span class="attr-ico" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="9" />
                   <path d="M3 12h18" />
                   <path d="M12 3c2.5 2.4 2.5 15.6 0 18M12 3c-2.5 2.4-2.5 15.6 0 18" />
                 </svg>
-              </span> C1 Inglés
+              </span> <span data-i18n="attr_english">C1 Inglés</span>
             </div>
             <div>
-              <span aria-hidden="true">
+              <span class="attr-ico" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 11.5 6.7 7a2 2 0 0 1 1.9-1.3h6.8A2 2 0 0 1 17.3 7L19 11.5" />
                   <path d="M3.5 11.5h17v4h-17z" />
                   <circle cx="7.5" cy="15.5" r="1.6" />
                   <circle cx="16.5" cy="15.5" r="1.6" />
                 </svg>
-              </span> Carnet B
+              </span> <span data-i18n="attr_license">Carnet B</span>
             </div>
             <div>
-              <span aria-hidden="true">
+              <span class="attr-ico" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="7.5" width="18" height="12" rx="2" />
                   <path d="M8 7.5V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1.5" />
                   <path d="M3 12.5h18" />
                 </svg>
-              </span> Prácticas ULL
+              </span> <span data-i18n="attr_internship">Prácticas ULL</span>
             </div>
           </div>
         </div>
@@ -222,6 +339,54 @@
           </div>
         </div>
 
+      </div>
+
+      <div class="now reveal">
+        <div class="now-head">
+          <h3 class="now-title" data-i18n="now_title">En qué estoy ahora</h3>
+          <span class="now-date" data-i18n="now_date">Actualizado · junio 2026</span>
+        </div>
+        <ul class="now-list">
+          <li><span class="now-dot now-dot--cyan" aria-hidden="true"></span>
+            <span data-i18n="now_1">Prácticas en la Fundación General de la ULL, trabajando en Canarias Convive.</span></li>
+          <li><span class="now-dot now-dot--pink" aria-hidden="true"></span>
+            <span data-i18n="now_2">Aprendiendo sistemas distribuidos, PL/pgSQL avanzado y APIs REST.</span></li>
+          <li><span class="now-dot now-dot--yellow" aria-hidden="true"></span>
+            <span data-i18n="now_3">Manteniendo tsunagi y Diésel Barato como proyectos personales activos.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= TERMINAL ================= -->
+  <section id="terminal">
+    <div class="container">
+      <h2 class="section-title reveal">Terminal</h2>
+
+      <div class="code-window terminal-window reveal">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="file-name">diego@portfolio: ~</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-output" id="termOutput" role="log" aria-live="polite"
+            aria-label="Salida de la terminal">
+            <p class="term-line"><span class="term-echo">$</span> whoami</p>
+            <p class="term-line">Diego Gil — Backend Developer · estudiante de DAM en Tenerife · prácticas en la
+              Fundación General de la ULL.</p>
+            <p class="term-line"><span class="term-echo">$</span> help</p>
+            <p class="term-line">Comandos: help · whoami · stack · proyectos · contacto · clear</p>
+          </div>
+          <form class="terminal-input-row" id="termForm">
+            <label class="visually-hidden" for="termInput">Escribe un comando, por ejemplo help</label>
+            <span class="term-prompt" aria-hidden="true">diego@portfolio:~$</span>
+            <input type="text" id="termInput" class="term-input" autocomplete="off" autocapitalize="off"
+              spellcheck="false" enterkeyhint="send">
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -359,7 +524,7 @@
   <!-- ================= PROYECTOS ================= -->
   <section id="proyectos">
     <div class="container">
-      <h2 class="section-title reveal">Proyectos</h2>
+      <h2 class="section-title reveal" data-i18n="title_projects">Proyectos</h2>
 
       <div class="projects-grid">
 
@@ -370,7 +535,7 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">Canarias Convive</h3>
-            <p class="project-desc">Automatización del flujo de gestión de facturas con validaciones en cascada y
+            <p class="project-desc" data-i18n="desc_canarias">Automatización del flujo de gestión de facturas con validaciones en cascada y
               trazabilidad documento a documento.</p>
             <div class="project-badges">
               <span class="project-badge">Google Apps Script</span>
@@ -379,8 +544,34 @@
               <span class="project-badge">Google Sheets</span>
             </div>
           </div>
+          <details class="project-detail">
+            <summary class="project-detail-toggle">
+              <span class="detail-label-open">Ver detalle</span>
+              <span class="detail-label-close">Cerrar</span>
+              <svg class="detail-chevron" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="project-detail-body">
+              <p><strong>Contexto.</strong> La gestión de facturas del programa se hacía a mano, con validaciones
+                repetitivas y sin un rastro claro de en qué punto estaba cada documento.</p>
+              <p><strong>Mi rol.</strong> Durante las prácticas en la Fundación General de la ULL desarrollé el flujo
+                de automatización de principio a fin.</p>
+              <ul>
+                <li>Backend sobre Google Apps Script para integrarme con Sheets sin levantar infraestructura nueva.</li>
+                <li>Validaciones en cascada que comprueban cada factura antes de dejarla avanzar.</li>
+                <li>Frontend en Next.js desplegado en Vercel y trazabilidad documento a documento.</li>
+              </ul>
+              <p class="project-detail-learn"><strong>Aprendí</strong> a modelar un proceso real de negocio y a poner
+                la trazabilidad por delante de añadir funciones.</p>
+            </div>
+          </details>
           <div class="project-footer">
-            <span class="project-status">✦ Prácticas profesionales</span>
+            <span class="project-meta">Prácticas</span>
+            <div class="project-actions">
+              <span class="project-tag">Privado</span>
+            </div>
           </div>
         </article>
 
@@ -391,7 +582,7 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">AnimeShowdown</h3>
-            <p class="project-desc">Torneos y ranking ELO de personajes anime. Backend con autenticación JWT y
+            <p class="project-desc" data-i18n="desc_anime">Torneos y ranking ELO de personajes anime. Backend con autenticación JWT y
               persistencia en PostgreSQL.</p>
             <div class="project-badges">
               <span class="project-badge">Spring Boot 3</span>
@@ -400,15 +591,47 @@
               <span class="project-badge">Jikan API</span>
             </div>
           </div>
-          <div class="project-footer">
-            <a href="https://github.com/diegoalegil/AnimeShowdown" target="_blank" rel="noopener" class="project-link"
-              aria-label="Ver el repositorio de AnimeShowdown en GitHub">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
+          <details class="project-detail">
+            <summary class="project-detail-toggle">
+              <span class="detail-label-open">Ver detalle</span>
+              <span class="detail-label-close">Cerrar</span>
+              <svg class="detail-chevron" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
               </svg>
-              <span>GitHub</span>
-            </a>
+            </summary>
+            <div class="project-detail-body">
+              <p><strong>Contexto.</strong> Quería comparar personajes de anime con un ranking que fuese justo y se
+                mantuviera entre sesiones.</p>
+              <p><strong>Mi rol.</strong> Backend full-stack: API, autenticación y persistencia.</p>
+              <ul>
+                <li>Ranking ELO para que cada duelo ajuste la puntuación de forma proporcional.</li>
+                <li>Autenticación con JWT para sesiones sin estado.</li>
+                <li>Datos integrados desde la Jikan API (MyAnimeList) y normalizados en PostgreSQL.</li>
+              </ul>
+              <p class="project-detail-learn"><strong>Aprendí</strong> a diseñar una API REST autenticada y a tratar
+                datos de una fuente externa que no controlo.</p>
+            </div>
+          </details>
+          <div class="project-footer">
+            <span class="project-meta">Full-stack</span>
+            <div class="project-actions">
+              <a href="https://animeshowdown.dev" target="_blank" rel="noopener" class="project-demo"
+                aria-label="Ver demo de AnimeShowdown (abre en nueva pestaña)">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 4h6v6M20 4l-9 9M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4" />
+                </svg>
+                <span>Demo</span>
+              </a>
+              <a href="https://github.com/diegoalegil/AnimeShowdown" target="_blank" rel="noopener" class="project-link"
+                aria-label="Ver el repositorio de AnimeShowdown en GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#icon-github"></use>
+                </svg>
+                <span>GitHub</span>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -419,7 +642,7 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">TinerPay</h3>
-            <p class="project-desc">Sistema de pagos distribuido tolerante a fallos sobre una base de datos SQL
+            <p class="project-desc" data-i18n="desc_tinerpay">Sistema de pagos distribuido tolerante a fallos sobre una base de datos SQL
               global.</p>
             <div class="project-badges">
               <span class="project-badge">Node.js</span>
@@ -427,15 +650,102 @@
               <span class="project-badge">REST</span>
             </div>
           </div>
-          <div class="project-footer">
-            <a href="https://github.com/diegoalegil/TinerPay" target="_blank" rel="noopener" class="project-link"
-              aria-label="Ver el repositorio de TinerPay en GitHub">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
+          <details class="project-detail">
+            <summary class="project-detail-toggle">
+              <span class="detail-label-open">Ver detalle</span>
+              <span class="detail-label-close">Cerrar</span>
+              <svg class="detail-chevron" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
               </svg>
-              <span>GitHub</span>
-            </a>
+            </summary>
+            <div class="project-detail-body">
+              <p><strong>Contexto.</strong> Procesar pagos sin perder consistencia aunque caiga un nodo o una región
+                entera.</p>
+              <p><strong>Mi rol.</strong> Diseño e implementación del backend distribuido.</p>
+              <ul>
+                <li>CockroachDB por su SQL distribuido con consistencia serializable global.</li>
+                <li>Una capa de servicio que aísla la lógica de negocio de la persistencia.</li>
+                <li>Operaciones idempotentes: reintentar un pago tras un fallo no lo cobra dos veces.</li>
+              </ul>
+
+              <figure class="arch-figure">
+                <figcaption>Arquitectura — pulsa o enfoca cada bloque</figcaption>
+                <svg class="arch-svg" viewBox="0 0 360 210" role="group"
+                  aria-label="Diagrama de arquitectura de TinerPay" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <!-- conexiones -->
+                  <g stroke="#eaf6ff" stroke-width="2" opacity=".8">
+                    <path d="M78 105h16" />
+                    <path d="M170 105h18" />
+                    <path d="M262 105c14 0 18-58 30-58M262 105h30M262 105c14 0 18 58 30 58" />
+                  </g>
+                  <!-- réplica entre nodos DB -->
+                  <g stroke="#ff00cc" stroke-width="1.6" stroke-dasharray="3 4" opacity=".75">
+                    <path d="M318 60v36M318 118v36M308 56 308 152" />
+                  </g>
+                  <!-- Cliente -->
+                  <g class="arch-node" data-node="client" tabindex="0" role="button" aria-describedby="archDesc"
+                    data-desc="Cliente — la app o el navegador que inicia un pago. Toda la lógica vive en el servidor; el cliente solo dispara la petición.">
+                    <title>Cliente</title>
+                    <rect x="12" y="84" width="66" height="42" rx="9" />
+                    <text x="45" y="110">Cliente</text>
+                  </g>
+                  <!-- API REST -->
+                  <g class="arch-node" data-node="api" tabindex="0" role="button" aria-describedby="archDesc"
+                    data-desc="API REST (Node.js) — recibe la petición y la valida. Sus endpoints son idempotentes: reintentar un pago no lo cobra dos veces.">
+                    <title>API REST en Node.js</title>
+                    <rect x="94" y="80" width="76" height="50" rx="9" />
+                    <text x="132" y="101">API REST</text>
+                    <text x="132" y="117" class="arch-sub">Node.js</text>
+                  </g>
+                  <!-- Servicio -->
+                  <g class="arch-node" data-node="service" tabindex="0" role="button" aria-describedby="archDesc"
+                    data-desc="Capa de servicio — separa la lógica de negocio de la base de datos, así puedo cambiar la persistencia sin reescribir la API.">
+                    <title>Capa de servicio</title>
+                    <rect x="188" y="80" width="74" height="50" rx="9" />
+                    <text x="225" y="101">Capa de</text>
+                    <text x="225" y="117">servicio</text>
+                  </g>
+                  <!-- CockroachDB cluster -->
+                  <g class="arch-node arch-db" data-node="db" tabindex="0" role="button" aria-describedby="archDesc"
+                    data-desc="CockroachDB — SQL distribuido en 3 nodos. Replica con consenso: si un nodo cae, los demás conservan el dato y el pago sigue siendo consistente.">
+                    <title>CockroachDB, 3 nodos distribuidos</title>
+                    <rect x="296" y="30" width="52" height="34" rx="7" />
+                    <text x="322" y="51">Nodo 1</text>
+                    <rect x="296" y="88" width="52" height="34" rx="7" />
+                    <text x="322" y="109">Nodo 2</text>
+                    <rect x="296" y="146" width="52" height="34" rx="7" />
+                    <text x="322" y="167">Nodo 3</text>
+                  </g>
+                </svg>
+                <p class="arch-desc" id="archDesc" aria-live="polite">CockroachDB mantiene el pago consistente aunque
+                  caiga un nodo. Pulsa o enfoca cada bloque para ver su rol.</p>
+              </figure>
+
+              <p class="project-detail-learn"><strong>Aprendí</strong> cómo funcionan la tolerancia a fallos y el
+                consenso en bases de datos distribuidas.</p>
+            </div>
+          </details>
+          <div class="project-footer">
+            <span class="project-meta">Backend</span>
+            <div class="project-actions">
+              <a href="https://diegoalegil.github.io/TinerPay/" target="_blank" rel="noopener" class="project-demo"
+                aria-label="Ver demo de TinerPay (abre en nueva pestaña)">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 4h6v6M20 4l-9 9M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4" />
+                </svg>
+                <span>Demo</span>
+              </a>
+              <a href="https://github.com/diegoalegil/TinerPay" target="_blank" rel="noopener" class="project-link"
+                aria-label="Ver el repositorio de TinerPay en GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#icon-github"></use>
+                </svg>
+                <span>GitHub</span>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -446,7 +756,7 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">tsunagi</h3>
-            <p class="project-desc">SDK de datos de anime para Java: un único cliente unificado sobre AniList, TMDb y
+            <p class="project-desc" data-i18n="desc_tsunagi">SDK de datos de anime para Java: un único cliente unificado sobre AniList, TMDb y
               Jikan.</p>
             <div class="project-badges">
               <span class="project-badge">Java</span>
@@ -455,15 +765,39 @@
               <span class="project-badge">TMDb</span>
             </div>
           </div>
-          <div class="project-footer">
-            <a href="https://github.com/diegoalegil/tsunagi" target="_blank" rel="noopener"
-              class="project-link" aria-label="Ver el repositorio tsunagi en GitHub">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
+          <details class="project-detail">
+            <summary class="project-detail-toggle">
+              <span class="detail-label-open">Ver detalle</span>
+              <span class="detail-label-close">Cerrar</span>
+              <svg class="detail-chevron" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
               </svg>
-              <span>GitHub</span>
-            </a>
+            </summary>
+            <div class="project-detail-body">
+              <p><strong>Contexto.</strong> Cada fuente de datos de anime (AniList, TMDb, Jikan) tiene su propia API,
+                su formato y sus rarezas.</p>
+              <p><strong>Mi rol.</strong> Diseño del SDK y su API pública.</p>
+              <ul>
+                <li>Un cliente unificado con un modelo de datos común a las tres fuentes.</li>
+                <li>Adaptadores por proveedor que ocultan las diferencias de cada API.</li>
+                <li>Una API fluida pensada para que quien la use no tenga que conocer las fuentes.</li>
+              </ul>
+              <p class="project-detail-learn"><strong>Aprendí</strong> a diseñar una librería y a abstraer proveedores
+                detrás de una interfaz estable.</p>
+            </div>
+          </details>
+          <div class="project-footer">
+            <span class="project-meta">SDK Java</span>
+            <div class="project-actions">
+              <a href="https://github.com/diegoalegil/tsunagi" target="_blank" rel="noopener"
+                class="project-link" aria-label="Ver el repositorio tsunagi en GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#icon-github"></use>
+                </svg>
+                <span>GitHub</span>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -474,7 +808,7 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">Anime Title Matcher</h3>
-            <p class="project-desc">Matcher difuso multi-señal entre AniList y TMDb con algoritmos de similitud propios
+            <p class="project-desc" data-i18n="desc_matcher">Matcher difuso multi-señal entre AniList y TMDb con algoritmos de similitud propios
               y scoring explicable.</p>
             <div class="project-badges">
               <span class="project-badge">Java</span>
@@ -482,15 +816,39 @@
               <span class="project-badge">Fuzzy matching</span>
             </div>
           </div>
-          <div class="project-footer">
-            <a href="https://github.com/diegoalegil/anime-title-matcher" target="_blank" rel="noopener"
-              class="project-link" aria-label="Ver el repositorio anime-title-matcher en GitHub">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
+          <details class="project-detail">
+            <summary class="project-detail-toggle">
+              <span class="detail-label-open">Ver detalle</span>
+              <span class="detail-label-close">Cerrar</span>
+              <svg class="detail-chevron" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
               </svg>
-              <span>GitHub</span>
-            </a>
+            </summary>
+            <div class="project-detail-body">
+              <p><strong>Contexto.</strong> Enlazar un anime de AniList con su entrada en TMDb cuando los títulos no
+                coinciden exactamente (traducciones, romanizaciones, subtítulos).</p>
+              <p><strong>Mi rol.</strong> Diseño del algoritmo de emparejamiento.</p>
+              <ul>
+                <li>Similitud multi-señal: combina título, año y tipo con pesos.</li>
+                <li>Algoritmos de similitud de cadenas escritos a mano, sin librerías de matching.</li>
+                <li>Scoring explicable que justifica por qué cada match recibe su puntuación.</li>
+              </ul>
+              <p class="project-detail-learn"><strong>Aprendí</strong> matching difuso y a diseñar un score que una
+                persona pueda interpretar.</p>
+            </div>
+          </details>
+          <div class="project-footer">
+            <span class="project-meta">Algoritmos</span>
+            <div class="project-actions">
+              <a href="https://github.com/diegoalegil/anime-title-matcher" target="_blank" rel="noopener"
+                class="project-link" aria-label="Ver el repositorio anime-title-matcher en GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#icon-github"></use>
+                </svg>
+                <span>GitHub</span>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -501,7 +859,7 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">Diésel Barato</h3>
-            <p class="project-desc">PWA con los precios oficiales del diésel en Tenerife: la gasolinera más barata,
+            <p class="project-desc" data-i18n="desc_diesel">PWA con los precios oficiales del diésel en Tenerife: la gasolinera más barata,
               también offline.</p>
             <div class="project-badges">
               <span class="project-badge">PWA</span>
@@ -509,15 +867,47 @@
               <span class="project-badge">Datos oficiales</span>
             </div>
           </div>
-          <div class="project-footer">
-            <a href="https://github.com/diegoalegil/diesel-barato" target="_blank" rel="noopener"
-              class="project-link" aria-label="Ver el repositorio diesel-barato en GitHub">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
+          <details class="project-detail">
+            <summary class="project-detail-toggle">
+              <span class="detail-label-open">Ver detalle</span>
+              <span class="detail-label-close">Cerrar</span>
+              <svg class="detail-chevron" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
               </svg>
-              <span>GitHub</span>
-            </a>
+            </summary>
+            <div class="project-detail-body">
+              <p><strong>Contexto.</strong> Encontrar rápido la gasolinera de diésel más barata de Tenerife, también
+                sin conexión.</p>
+              <p><strong>Mi rol.</strong> Desarrollo completo de la PWA.</p>
+              <ul>
+                <li>App instalable con caché offline para consultarla sin datos.</li>
+                <li>Precios oficiales del Ministerio como única fuente de verdad.</li>
+                <li>Orden por precio para responder a la pregunta real: ¿dónde lleno más barato?</li>
+              </ul>
+              <p class="project-detail-learn"><strong>Aprendí</strong> a construir una PWA con service workers y a
+                consumir datos abiertos oficiales.</p>
+            </div>
+          </details>
+          <div class="project-footer">
+            <span class="project-meta">PWA</span>
+            <div class="project-actions">
+              <a href="https://diegoalegil.github.io/diesel-barato/" target="_blank" rel="noopener" class="project-demo"
+                aria-label="Probar la PWA de Diésel Barato (abre en nueva pestaña)">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 4h6v6M20 4l-9 9M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4" />
+                </svg>
+                <span>Probar PWA</span>
+              </a>
+              <a href="https://github.com/diegoalegil/diesel-barato" target="_blank" rel="noopener"
+                class="project-link" aria-label="Ver el repositorio diesel-barato en GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#icon-github"></use>
+                </svg>
+                <span>GitHub</span>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -529,7 +919,7 @@
   <!-- ================= FORMACIÓN ================= -->
   <section id="formacion">
     <div class="container">
-      <h2 class="section-title reveal">Formación</h2>
+      <h2 class="section-title reveal" data-i18n="title_education">Formación</h2>
 
       <div class="timeline">
 
@@ -569,32 +959,47 @@
       <div class="contact-grid">
 
         <div class="reveal">
-          <p class="contact-label">Contacto</p>
-          <h2 class="contact-title">Contáctame</h2>
+          <p class="contact-label" data-i18n="contact_label">Contacto</p>
+          <h2 class="contact-title" data-i18n="contact_title">Contáctame</h2>
 
           <div class="contact-cards">
 
-            <a href="mailto:diegogildam@gmail.com" class="contact-card"
-              aria-label="Enviar email a diegogildam@gmail.com">
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
-                  <path d="m3.5 6.5 8.5 6.5 8.5-6.5" />
+            <div class="contact-card-wrap">
+              <a href="mailto:diegogildam@gmail.com" class="contact-card"
+                aria-label="Enviar email a diegogildam@gmail.com">
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+                    <path d="m3.5 6.5 8.5 6.5 8.5-6.5" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="contact-card-title">Email</p>
+                  <p>diegogildam@gmail.com</p>
+                </div>
+              </a>
+              <button type="button" class="copy-btn" id="copyEmailBtn"
+                aria-label="Copiar email al portapapeles" data-email="diegogildam@gmail.com">
+                <svg class="copy-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"
+                  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="11" height="11" rx="2.5" />
+                  <path d="M5 15a2 2 0 0 1-1-1.7V6a2 2 0 0 1 2-2h7a2 2 0 0 1 1.7 1" />
                 </svg>
-              </span>
-              <div>
-                <p class="contact-card-title">Email</p>
-                <p>diegogildam@gmail.com</p>
-              </div>
-            </a>
+                <svg class="copy-check" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m5 12 5 5 9-11" />
+                </svg>
+                <span class="copy-label">Copiar</span>
+              </button>
+              <span class="visually-hidden" role="status" aria-live="polite" id="copyStatus"></span>
+            </div>
 
             <a href="https://github.com/diegoalegil" target="_blank" rel="noopener" class="contact-card"
               aria-label="Abrir el perfil de GitHub de Diego Gil en una nueva pestaña">
               <span class="icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0.5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
+                  <use href="#icon-github"></use>
                 </svg>
               </span>
               <div>
@@ -612,7 +1017,7 @@
                 </svg>
               </span>
               <div>
-                <p class="contact-card-title">Teléfono</p>
+                <p class="contact-card-title" data-i18n="contact_phone">Teléfono</p>
                 <p>+34 666 329 790</p>
               </div>
             </a>
@@ -621,11 +1026,11 @@
         </div>
 
         <div class="contact-text reveal">
-          <p class="contact-quote">
+          <p class="contact-quote" data-i18n="contact_quote">
             Abierto a colaborar en proyectos que busquen evolucionar, optimizar procesos y construir
             soluciones sólidas a largo plazo.
           </p>
-          <p class="contact-desc">
+          <p class="contact-desc" data-i18n="contact_desc">
             Estudiante de Desarrollo de Aplicaciones Multiplataforma en Tenerife. Interesado en backend,
             arquitectura de software y mejora continua de sistemas que aporten valor.
           </p>
@@ -636,8 +1041,8 @@
     </div>
   </section>
 
-  </main>
 
+  </main>
 
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
