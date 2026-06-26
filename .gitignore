@@ -16,3 +16,8 @@ node_modules/
 
 # Artefactos de verificación visual
 shots/
+
+# Notas de trabajo internas
+NOTES.md
+PROMPTS.md
+
