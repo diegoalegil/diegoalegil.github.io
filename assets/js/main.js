@@ -12,7 +12,7 @@
     const I18N = {
       es: {
         doc_title: 'Diego Gil — Backend · Bases de datos · DAM',
-        meta_desc: 'Diego Gil. Desarrollador backend especializado en Java, Spring Boot y PostgreSQL. Estudiante de DAM en Tenerife y actualmente en prácticas en la Fundación General de la ULL trabajando en sistemas distribuidos y arquitectura de software.',
+        meta_desc: 'Diego Gil. Desarrollador backend especializado en Java, Spring Boot y PostgreSQL. Estudiante de 2º de DAM en Tenerife. Hice mis prácticas en la Fundación General de la ULL, donde mi código sigue en producción: el mapa interactivo de canariasconvive.com.',
         nav_inicio: 'Inicio', nav_sobremi: 'Sobre mí', nav_stack: 'Stack', nav_proyectos: 'Proyectos',
         nav_formacion: 'Formación', nav_contactar: 'Contactar',
         skip: 'Saltar al contenido',
@@ -21,7 +21,7 @@
         tag_backend: 'Backend', tag_db: 'Bases de datos', tag_arch: 'Arquitectura',
         cta_contact: 'Contáctame', cta_github: 'Ver GitHub',
         title_about: 'Sobre mí', title_projects: 'Proyectos', title_education: 'Formación',
-        about_text: 'Estudiante de <strong>Desarrollo de Aplicaciones Multiplataforma</strong> en Tenerife. Me obsesiona entender cómo funcionan las cosas por dentro y construir soluciones que aporten valor real.',
+        about_text: 'Estudiante de 2º de <strong>Desarrollo de Aplicaciones Multiplataforma</strong> en Tenerife. Me obsesiona entender cómo funcionan las cosas por dentro y construir soluciones que aporten valor real.',
         attr_dam: 'DAM Tenerife', attr_english: 'C1 Inglés', attr_license: 'Carnet B', attr_internship: 'Prácticas ULL',
         desc_canarias: 'Automatización del flujo de gestión de facturas con validaciones en cascada y trazabilidad documento a documento.',
         desc_anime: 'Torneos y ranking ELO de personajes anime. Backend con autenticación JWT y persistencia en PostgreSQL.',
@@ -31,14 +31,14 @@
         desc_diesel: 'PWA con los precios oficiales del diésel en Tenerife: la gasolinera más barata, también offline.',
         contact_label: 'Contacto', contact_title: 'Contáctame', contact_phone: 'Teléfono',
         contact_quote: 'Abierto a colaborar en proyectos que busquen evolucionar, optimizar procesos y construir soluciones sólidas a largo plazo.',
-        now_title: 'En qué estoy ahora', now_date: 'Actualizado · junio 2026',
-        now_1: 'Prácticas en la Fundación General de la ULL, trabajando en Canarias Convive.',
-        now_2: 'Aprendiendo sistemas distribuidos, PL/pgSQL avanzado y APIs REST.',
-        now_3: 'Manteniendo tsunagi y Diésel Barato como proyectos personales activos.'
+        now_title: 'En qué estoy ahora', now_date: 'Actualizado · septiembre 2026',
+        now_1: 'Empezando 2º de DAM en Tenerife.',
+        now_2: 'Acceso a datos (JDBC, JPA), programación de servicios y procesos, y desarrollo para móviles.',
+        now_3: 'Manteniendo el mapa de Canarias Convive en producción y las fichas municipales como prototipo.'
       },
       en: {
         doc_title: 'Diego Gil — Backend · Databases · DAM',
-        meta_desc: 'Diego Gil. Backend developer specialised in Java, Spring Boot and PostgreSQL. DAM student in Tenerife, currently interning at Fundación General de la ULL working on distributed systems and software architecture.',
+        meta_desc: 'Diego Gil. Backend developer specialised in Java, Spring Boot and PostgreSQL. Second-year DAM student in Tenerife. I did my internship at Fundación General de la ULL, where my code is still in production: the interactive map at canariasconvive.com.',
         nav_inicio: 'Home', nav_sobremi: 'About', nav_stack: 'Stack', nav_proyectos: 'Projects',
         nav_formacion: 'Education', nav_contactar: 'Contact',
         skip: 'Skip to content',
@@ -47,7 +47,7 @@
         tag_backend: 'Backend', tag_db: 'Databases', tag_arch: 'Architecture',
         cta_contact: 'Get in touch', cta_github: 'View GitHub',
         title_about: 'About me', title_projects: 'Projects', title_education: 'Education',
-        about_text: '<strong>Multiplatform Application Development</strong> student in Tenerife. I am obsessed with understanding how things work under the hood and building solutions that bring real value.',
+        about_text: 'Second-year <strong>Multiplatform Application Development</strong> student in Tenerife. I am obsessed with understanding how things work under the hood and building solutions that bring real value.',
         attr_dam: 'DAM · Tenerife', attr_english: 'C1 English', attr_license: 'Driving licence B', attr_internship: 'ULL internship',
         desc_canarias: 'Automated invoice-management flow with cascading validations and document-by-document traceability.',
         desc_anime: 'Anime-character tournaments and ELO ranking. Backend with JWT authentication and PostgreSQL persistence.',
@@ -57,11 +57,11 @@
         desc_diesel: 'PWA with the official diesel prices in Tenerife: the cheapest station, also offline.',
         contact_label: 'Contact', contact_title: 'Get in touch', contact_phone: 'Phone',
         contact_quote: 'Open to collaborating on projects that aim to evolve, optimise processes and build solid, long-term solutions.',
-        contact_desc: 'Multiplatform Application Development student in Tenerife. Interested in backend, software architecture and the continuous improvement of systems that bring value.',
-        now_title: 'What I am working on now', now_date: 'Updated · June 2026',
-        now_1: 'Interning at Fundación General de la ULL, working on Canarias Convive.',
-        now_2: 'Learning distributed systems, advanced PL/pgSQL and REST APIs.',
-        now_3: 'Maintaining tsunagi and Diésel Barato as active personal projects.'
+        contact_desc: 'Second-year Multiplatform Application Development student in Tenerife. Interested in backend, software architecture and the continuous improvement of systems that bring value.',
+        now_title: 'What I am working on now', now_date: 'Updated · September 2026',
+        now_1: 'Starting the second year of DAM in Tenerife.',
+        now_2: 'Data access (JDBC, JPA), services and processes programming, and mobile development.',
+        now_3: 'Keeping the Canarias Convive map in production and the municipal fact sheets as a prototype.'
       }
     };
 
@@ -212,7 +212,7 @@
             '  clear       limpia la terminal'].forEach(l => printLine(l));
         },
         whoami() {
-          printLine('Diego Gil — Backend Developer · estudiante de DAM en Tenerife · prácticas en la Fundación General de la ULL.');
+          printLine('Diego Gil — Backend Developer · estudiante de 2º de DAM en Tenerife · prácticas hechas en la Fundación General de la ULL, con código en producción en canariasconvive.com.');
         },
         stack() {
           printLine([el('span', 'term-cat', 'Backend  '), 'Java · Spring Boot · Node.js · PHP']);
