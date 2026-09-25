@@ -14,10 +14,12 @@
     <path d="M54 44v68M82 44v68"></path>
   </g>
   <path d="M106 116h78" stroke="#eaf6ff" stroke-width="4"></path>
-  <g filter="url(#sh)" stroke="#eaf6ff" stroke-width="2.5">
-    <rect x="110" y="92" width="16" height="24" rx="2" fill="url(#g)"></rect>
-    <rect x="134" y="76" width="16" height="40" rx="2" fill="url(#g)"></rect>
-    <rect x="158" y="56" width="16" height="60" rx="2" fill="url(#g)"></rect>
+  <g transform="translate(0 6)">
+    <g filter="url(#sh)" stroke="#eaf6ff" stroke-width="2.5">
+      <rect x="118" y="62" width="30" height="42" rx="3" fill="url(#g)" transform="rotate(-16 133 104)"></rect>
+      <rect x="148" y="62" width="30" height="42" rx="3" fill="url(#g)" transform="rotate(16 163 104)"></rect>
+      <rect x="133" y="56" width="30" height="44" rx="3" fill="url(#g)"></rect>
+    </g>
+    <path d="m148 66 3.5 7.5 8 1-6 5.5 1.5 8-7-4-7 4 1.5-8-6-5.5 8-1z" fill="#ffc857" stroke="#ffc857" stroke-width="2"></path>
   </g>
-  <path d="m166 36 4 9 9 1-7 7 2 9-8-5-8 5 2-9-7-7 9-1z" fill="#ffc857" stroke="#ffc857" stroke-width="2.5"></path>
 </svg>

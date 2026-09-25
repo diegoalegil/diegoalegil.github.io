@@ -107,9 +107,10 @@
         "@type": "SoftwareSourceCode",
         "@id": "https://github.com/diegoalegil/AnimeShowdown",
         "name": "AnimeShowdown",
-        "description": "Torneos y ranking ELO de personajes anime. Backend con autenticación JWT y persistencia en PostgreSQL.",
+        "description": "Galería estática para coleccionar cartas de anime: 1086 personajes de 105 series y 52 especiales. Sin cuenta y sin backend.",
         "codeRepository": "https://github.com/diegoalegil/AnimeShowdown",
-        "programmingLanguage": "Java",
+        "url": "https://diegoalegil.github.io/AnimeShowdown/",
+        "programmingLanguage": "JavaScript",
         "author": { "@id": "https://diegoalegil.github.io/#diego" }
       },
       {
@@ -582,13 +583,13 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">AnimeShowdown</h3>
-            <p class="project-desc" data-i18n="desc_anime">Torneos y ranking ELO de personajes anime. Backend con autenticación JWT y
-              persistencia en PostgreSQL.</p>
+            <p class="project-desc" data-i18n="desc_anime">Galería estática para coleccionar cartas de anime: 1086 personajes de 105
+              series y 52 especiales. Sin cuenta y sin backend.</p>
             <div class="project-badges">
-              <span class="project-badge">Spring Boot 3</span>
-              <span class="project-badge">JWT</span>
-              <span class="project-badge">PostgreSQL</span>
-              <span class="project-badge">Jikan API</span>
+              <span class="project-badge">React 19</span>
+              <span class="project-badge">Vite</span>
+              <span class="project-badge">Tailwind v4</span>
+              <span class="project-badge">GitHub Pages</span>
             </div>
           </div>
           <details class="project-detail">
@@ -601,23 +602,27 @@
               </svg>
             </summary>
             <div class="project-detail-body">
-              <p><strong>Contexto.</strong> Quería comparar personajes de anime con un ranking que fuese justo y se
-                mantuviera entre sesiones.</p>
-              <p><strong>Mi rol.</strong> Backend full-stack: API, autenticación y persistencia.</p>
+              <p><strong>Contexto.</strong> Quería una forma de recorrer y coleccionar personajes de anime que se
+                abriera desde cualquier dispositivo, sin registrarse y sin servidores que mantener.</p>
+              <p><strong>Mi rol.</strong> Diseño y desarrollo completos: datos, interfaz y pipeline de build.</p>
               <ul>
-                <li>Ranking ELO para que cada duelo ajuste la puntuación de forma proporcional.</li>
-                <li>Autenticación con JWT para sesiones sin estado.</li>
-                <li>Datos integrados desde la Jikan API (MyAnimeList) y normalizados en PostgreSQL.</li>
+                <li>Cinco sobres gratis al día; la quinta carta de cada sobre tiene un 15&nbsp;% de ser especial. La
+                  colección se guarda en el navegador y se exporta o importa como código.</li>
+                <li>Cada carta tiene su propia página prerenderizada, con el nombre japonés en vertical (datos de
+                  AniList), y cada serie su arte y su emblema.</li>
+                <li>Presupuesto de rendimiento vigilado por el build: JS inicial ≤&nbsp;100&nbsp;kB gzip, solo
+                  animaciones de transform/opacity y ~60&nbsp;fps medidos en Chromium y WebKit.</li>
               </ul>
-              <p class="project-detail-learn"><strong>Aprendí</strong> a diseñar una API REST autenticada y a tratar
-                datos de una fuente externa que no controlo.</p>
+              <p class="project-detail-learn"><strong>Aprendí</strong> a tratar el rendimiento como un requisito más y
+                a simplificar: antes era una plataforma full-stack de votaciones, y como web estática es más rápida y
+                mucho más fácil de mantener.</p>
             </div>
           </details>
           <div class="project-footer">
-            <span class="project-meta">Full-stack</span>
+            <span class="project-meta">Frontend</span>
             <div class="project-actions">
-              <a href="https://animeshowdown.dev" target="_blank" rel="noopener" class="project-demo"
-                aria-label="Ver demo de AnimeShowdown (abre en nueva pestaña)">
+              <a href="https://diegoalegil.github.io/AnimeShowdown/" target="_blank" rel="noopener" class="project-demo"
+                aria-label="Abrir la galería de AnimeShowdown (abre en nueva pestaña)">
                 <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"
                   stroke-linecap="round" stroke-linejoin="round">
                   <path d="M14 4h6v6M20 4l-9 9M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4" />
